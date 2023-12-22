@@ -1,5 +1,7 @@
 [
   "obsidian-outliner",
   "obsidian-git",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "url-into-selection",
+  "obsidian-link-embed"
 ]
