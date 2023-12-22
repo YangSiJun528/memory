@@ -3,5 +3,9 @@
   "useMarkdownLinks": true,
   "newFileLocation": "current",
   "newLinkFormat": "absolute",
-  "attachmentFolderPath": "./"
+  "attachmentFolderPath": "./",
+  "focusNewTab": true,
+  "propertiesInDocument": "visible",
+  "alwaysUpdateLinks": true,
+  "defaultViewMode": "preview"
 }
