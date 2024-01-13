@@ -7,6 +7,8 @@
 [Obsidian](https://github.com/obsidianmd)을 사용하여 글을 작성합니다.
 - - -
 
-## Java
-- [Java Platform Edition - SE, ME, EE, FX, Card](notes/Java/Java%20Platform%20Edition.md)
-- 
+## Java Platfrom
+- [Java Platform Edition - SE, ME, EE, FX, Card](notes/Java%20Platform/Java%20Platform%20Edition.md)
+
+
+## Java Programming Language
