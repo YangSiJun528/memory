@@ -9,6 +9,8 @@
 
 ## Java Platfrom
 - [Java Platform Edition - SE, ME, EE, FX, Card](notes/Java%20Platform/Java%20Platform%20Edition.md)
+- [Java Platform 연대기](notes/Java%20Platform/Java%20Platform%20연대기.md)
+- [Jigsaw란? - 아직 미완](notes/Java%20Platform/Jigsaw란?%20-%20아직%20미완.md)
 
 
 ## Java Programming Language
