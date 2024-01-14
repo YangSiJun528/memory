@@ -15,7 +15,8 @@ Oracle OpenWorld 컨퍼런스에서 썬 마이크로시스템즈는 Java SE를 �
 OpenJDK 7 출시, 이 시점이후 Java SE의 공식 참고 구현
 #### 2018년
 오라클이 OracleJDK를 영구 라이선스에서 Java SE Subscription이라는 년 단위 구독(Subscription) 라이선스로 변경.    
-이로 인해서 타 벤더의 OpenJDK로 많은 회사가 넘어감, ex: [LINE의 OpenJDK 적용기: 호환성 확인부터 주의 사항까지](https://engineering.linecorp.com/en/blog/line-open-jdk)
+이로 인해서 타 벤더의 OpenJDK로 많은 회사가 넘어감,   
+	ex: [LINE의 OpenJDK 적용기: 호환성 확인부터 주의 사항까지](https://engineering.linecorp.com/en/blog/line-open-jdk)
 
 ### 오라클의 Oracle JDK 라이선스 전환
 기존까지는 BCL(Binary Code License)를 사용했다. 일반 목적 컴퓨팅은 무료지만, 특수 목적의 컴퓨팅 장비에 사용 시 유료.    
@@ -69,6 +70,6 @@ Oracle JDK와 Java를 동일하게 판단하여 생긴 문제.
 
 # Reference
 
-[위키피디아 - OpenJDK](https://en.wikipedia.org/wiki/OpenJDK) 
+[위키피디아 - OpenJDK](https://en.wikipedia.org/wiki/OpenJDK)    
 [OKKY - Java 유료 논쟁, Oracle JDK와 OpenJDK의 차이 정리](https://okky.kr/articles/490213)
 
