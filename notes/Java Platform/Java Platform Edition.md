@@ -38,6 +38,8 @@ OpenJDK를 통해서 관리되며, OpenJDK는 버전 7 이후로 자바 SE의 �
 
 [Java Platform Standard Edition의 구현체는 JRE, JVM가 있다.](https://docs.oracle.com/javase//7/docs/)
 
+[Java SE 8 기준 Java 개념도](https://docs.oracle.com/javase/8/docs/)
+
 ## Jakarta EE, Enterprise Edition
 명칭 변화 : J2EE -> Java EE -> Jakarta EE
 
