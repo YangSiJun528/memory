@@ -18,3 +18,9 @@
 - [OpenJDK와 타 JDK와 비교 - JVM 비교](notes/Java%20Platform/OpenJDK와%20타%20JDK와%20비교%20-%20JVM%20비교.md)
 
 ## Java Programming Language
+
+
+## etc
+> 아직 분류 기준이 정확하지 않은 노트들
+
+- [바이트코드와 가상머신](notes/바이트코드와%20가상머신.md)
