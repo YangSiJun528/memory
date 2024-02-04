@@ -16,6 +16,7 @@
 - [OpenJDK의 배경과 개념, OracleJDK와 유료화 문제 - OpenJDK ,JEP, OCA, OCTLA](notes/Java%20Platform/OpenJDK의%20배경과%20개념,%20OracleJDK와%20유료화%20문제%20-%20OpenJDK%20,JEP,%20OCA,%20OCTLA.md)
 - [자바가 발전하는 과정](notes/Java%20Platform/자바가%20발전하는%20과정.md)
 - [OpenJDK와 타 JDK와 비교 - JVM 비교](notes/Java%20Platform/OpenJDK와%20타%20JDK와%20비교%20-%20JVM%20비교.md)
+- [Java 바이트코드 구조](notes/Java%20Platform/Java%20바이트코드%20구조.md)
 
 ## Java Programming Language
 
