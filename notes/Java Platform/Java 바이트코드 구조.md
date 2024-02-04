@@ -95,13 +95,22 @@ SourceFile: "Greeting.java"
         - **LocalVariableTable**: 로컬 변수 테이블
 
 #### 바이트코드 명령어
-|명령어 이름|하는 일|
-|---|---|
-|invokeinterface|인터페이스에 정의된 메서드 호출|
-|invokespecial|생성자, 현재 클래스의 메서드, 수퍼클래스의 메서드 호출|
-|invokestatic|정적 메서드 호출|
-|invokevirtual|자바 메서드 호출의 기본 방식이며, 객체 참조(`obj.`)를 붙여서 호출되는 일반적인 메서드 호출|
-|invokedynamic|JVM에서 실행되는 동적 타입 언어를 위해 Java 7에 추가된 명령어. 람다식도 invokedynamic을 이용해서 구현되었다. 자세한 내용은 [오라클 문서](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/multiple-language-support.html)나 [네이버 문서](https://d2.naver.com/helloworld/4911107) 또는 [DZone 문서](https://dzone.com/articles/dismantling-invokedynamic)를 참고하자.
+
+`invoke~`는 전부 결과를 operand stack에 올린다.
+
+| 명령어 이름 | 하는 일 |
+| ---- | ---- |
+| invokeinterface | 인터페이스에 정의된 메서드 호출 |
+| invokespecial | 생성자 호출이나 현재 클래스의 private 메서드, 수퍼클래스의 메서드를 호출 |
+| invokestatic | 정적 메서드 호출 |
+| invokevirtual | 자바 메서드 호출의 기본 방식이며, 객체 참조(`obj.`)를 붙여서 호출되는 일반적인 메서드 호출 |
+| invokedynamic | JVM에서 실행되는 동적 타입 언어를 위해 Java 7에 추가된 명령어. 람다식도 invokedynamic을 이용해서 구현되었다. 자세한 내용은 [오라클 문서](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/multiple-language-support.html)나 [네이버 문서](https://d2.naver.com/helloworld/4911107) 또는 [DZone 문서](https://dzone.com/articles/dismantling-invokedynamic)를 참고하자. |
+| aload | 특정 local variables를 operand stack에 push.<br>ex: `aload_0`은 constant pool `#0`을 operand stack에 로드 |
+| ldc | constant pool에서부터 `#index` 에 해당하는 데이터를 가져옴 |
+| astore | 특정 operand stack의 값이나 참조를 local variables에 값을 저장 |
+| new | 새로운 객체를 생성 |
+| dup | operand stack top의 값이나 참조를 복사하여 operand stack에 push |
+| return | 메서드의 반환 값을 처리. 반환 값이 있을 경우 operand stack에서 값을 꺼내어 반환, 반환 값이 없는 경우 void를 반환 |
 
 ### 더 구체적인 바이트코드 예시
 
@@ -251,6 +260,7 @@ BootstrapMethods:
 ```
 
 # Reference
-- [Oracle - Java SE 8 Spec](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html)
+- [Oracle - Java SE 8 Spec](https://docs.oracle.com/javase/specs/jvms/se8/html/)
 - [Oracle - The javap Command](https://docs.oracle.com/en/java/javase/21/docs/specs/man/javap.html)
 - [블로그 - Back to the Essence - Java 컴파일에서 실행까지](https://homoefficio.github.io/2019/01/31/Back-to-the-Essence-Java-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EC%97%90%EC%84%9C-%EC%8B%A4%ED%96%89%EA%B9%8C%EC%A7%80-1/)
+- [블로그 - JVM stack과 frame](https://johngrib.github.io/wiki/jvm-stack/)
