@@ -18,9 +18,11 @@
 참조 타입의 경우에는 객체의 주소(Reference)를 가리키기 때문에 객체의 상태를 변경할 수 있다.   
 
 이런 점이 Call by Reference와 비슷하기 때문에 Call by Reference를 사용한다고 오해한다.
-하지만 주소값의 복사본이 전달되는 것이므로 메모리 관점에서는 "Call by Value"이다.
+하지만 주소값의 복사본이 전달되는 것이므로 메모리 관점에서는 "Call by Value"이다.  
+(Call By Reference라면 객체 자체(주소)를 전달해서 제어할 수 있어야 했다.)
 
-자바는 메모리 주소 자체에 접근할 수 없도록 만들어졌다.
+자바는 메모리 주소 자체에 접근할 수 없도록 만들어졌다.   
+(정확하지 않지만 Heap 영역을 직접 제어할 수 없다는 의미인 듯? Stack에서 _참조 타입_ 으로만 제어할 수 있다. Stack에서 참조 타입의 값을 null로 만들더라도 객체의 연결이 끊겼을 뿐 남아있다. 물론 나중에 GC 되겠지만)
 
 ## 예시
 
@@ -54,7 +56,7 @@ public class Main {
 
 `setPersonToNull(Person p)`에서 넘겨받은 `p`을 `null`로 변경했음에도 NPE가 발생하지 않았다.
 
-자바에서 메서드를 호출할 때, call by value로 주소값을 복사해서 전달해주기 때문이다.  
+자바에서 메서드를 호출할 때, call by value로 **주소값을 복사**해서 전달해주기 때문이다.  
 
 파라미터로 받은 참조 변수를 `null`로 변경할 경우, 호출한 쪽에는 영향을 주지 않는다.   
 (메서드 내부에서 변수의 값을 주소값에서 null로 변경하여 참조를 끊은 것 뿐이다.)
@@ -110,3 +112,5 @@ int main() {
 # Reference
 - [Inpa Dev 👨‍💻:티스토리 - ☕ 자바는 Call by reference 개념이 없다❓](https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EC%9E%90%EB%B0%94%EB%8A%94-Call-by-reference-%EA%B0%9C%EB%85%90%EC%9D%B4-%EC%97%86%EB%8B%A4-%E2%9D%93)
 - [[Java] 자바가 언제나 Call By Value인 이유 (Call By Reference X)](https://loosie.tistory.com/486)
+- [Java is Pass-by-Value, Dammit!](https://www.javadude.com/articles/passbyvalue.htm
+- [stackoverflow - Confused, whether java uses call by value or call by reference when an object reference is passed? [duplicate]](https://stackoverflow.com/questions/10750098/confused-whether-java-uses-call-by-value-or-call-by-reference-when-an-object-re)
