@@ -81,6 +81,13 @@ SourceFile: "Greeting.java"
 9. **Methods:** 클래스 또는 인터페이스에 선언된 메서드들.
 10. **Attributes:** 클래스 파일 및 클래스 파일 내의 구성 요소에 대한 추가 정보.
 
+#### Constant Pool
+해시(#)는 참조하고 있는 Constant Pool의 인덱스를 표시한다.
+
+클래스의 이름, 필드 및 메서드의 심볼릭 참조, 리터럴 값 등을 포함한다.
+Constant Pool은 클래스 파일의 로드 시점에 메모리에 로드되며, 클래스 파일에 포함된 모든 상수 값들을 저장한다.
+
+
 #### {} 내부 구성
 
 아래와 같은 구조를 가진다.
@@ -262,5 +269,6 @@ BootstrapMethods:
 # Reference
 - [Oracle - Java SE 8 Spec](https://docs.oracle.com/javase/specs/jvms/se8/html/)
 - [Oracle - The javap Command](https://docs.oracle.com/en/java/javase/21/docs/specs/man/javap.html)
+- [Oracle Blog - Understanding the constant pool inside a Java class file](https://blogs.oracle.com/javamagazine/post/java-class-file-constant-pool?source=:em:nw:mt)
 - [블로그 - Back to the Essence - Java 컴파일에서 실행까지](https://homoefficio.github.io/2019/01/31/Back-to-the-Essence-Java-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EC%97%90%EC%84%9C-%EC%8B%A4%ED%96%89%EA%B9%8C%EC%A7%80-1/)
 - [블로그 - JVM stack과 frame](https://johngrib.github.io/wiki/jvm-stack/)
