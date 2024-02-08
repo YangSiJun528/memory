@@ -110,7 +110,8 @@ int main() {
 자바는 언어 설계 상 메모리를 직접 참조할 수 없으므로 이러한 동작이 불가능하다.
 
 # Reference
+- ⭐️[개발 블로그 - Call by Value & Call by Reference](https://incheol-jung.gitbook.io/docs/q-and-a/java/call-by-value-and-call-by-reference)
 - [Inpa Dev 👨‍💻:티스토리 - ☕ 자바는 Call by reference 개념이 없다❓](https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EC%9E%90%EB%B0%94%EB%8A%94-Call-by-reference-%EA%B0%9C%EB%85%90%EC%9D%B4-%EC%97%86%EB%8B%A4-%E2%9D%93)
 - [[Java] 자바가 언제나 Call By Value인 이유 (Call By Reference X)](https://loosie.tistory.com/486)
 - [Java is Pass-by-Value, Dammit!](https://www.javadude.com/articles/passbyvalue.htm
-- [stackoverflow - Confused, whether java uses call by value or call by reference when an object reference is passed? [duplicate]](https://stackoverflow.com/questions/10750098/confused-whether-java-uses-call-by-value-or-call-by-reference-when-an-object-re)
+- ⭐️[stackoverflow - Confused, whether java uses call by value or call by reference when an object reference is passed? [duplicate]](https://stackoverflow.com/questions/10750098/confused-whether-java-uses-call-by-value-or-call-by-reference-when-an-object-re)
