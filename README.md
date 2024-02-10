@@ -17,9 +17,10 @@
 - [자바가 발전하는 과정](notes/Java%20Platform/자바가%20발전하는%20과정.md)
 - [OpenJDK와 타 JDK와 비교 - JVM 비교](notes/Java%20Platform/OpenJDK와%20타%20JDK와%20비교%20-%20JVM%20비교.md)
 - [Java 바이트코드 구조](notes/Java%20Platform/Java%20바이트코드%20구조.md)
-- [자바에는 Call by reference가 없다. (항상 Call by value)](notes/Java%20Platform/자바에는%20Call%20by%20reference가%20없다.%20(항상%20Call%20by%20value).md)
 
 ## Java Programming Language
+- [Java Primitive Type(기본형) vs Reference Type(참조형)](notes/Java%20Platform/Java%20Primitive%20Type(기본형)%20vs%20Reference%20Type(참조형).md)
+- [자바에는 Call by reference가 없다. (항상 Call by value)](notes/Java%20Platform/자바에는%20Call%20by%20reference가%20없다.%20(항상%20Call%20by%20value).md)
 
 
 ## etc
