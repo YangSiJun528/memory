@@ -20,7 +20,7 @@
 > 참조 값(종종 그냥 _reference_ )은 이러한 개체에 대한 포인터이자 개체를 참조하지 않는 특수한 null 참조입니다.  
 > [Oracle SE 10 JLS Spec](https://docs.oracle.com/javase/specs/jls/se10/html/jls-4.html)
 
-기본형을 제외한 모든 타입을 의미하며, 모두 `Object`를 상속한다.
+기본형을 제외한 모든 타입을 의미하며, 모두 `Object`를 상속한다. (Interface, Array 제외)
 
 Class, Interface, Enum, Array, null 유형이 존재한다.
 
