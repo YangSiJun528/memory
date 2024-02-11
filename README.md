@@ -16,13 +16,14 @@
 - [OpenJDK의 배경과 개념, OracleJDK와 유료화 문제 - OpenJDK ,JEP, OCA, OCTLA](notes/Java%20Platform/OpenJDK의%20배경과%20개념,%20OracleJDK와%20유료화%20문제%20-%20OpenJDK%20,JEP,%20OCA,%20OCTLA.md)
 - [자바가 발전하는 과정](notes/Java%20Platform/자바가%20발전하는%20과정.md)
 - [OpenJDK와 타 JDK와 비교 - JVM 비교](notes/Java%20Platform/OpenJDK와%20타%20JDK와%20비교%20-%20JVM%20비교.md)
-- [Java 바이트코드 구조](notes/Java%20Platform/Java%20바이트코드%20구조.md)
 
 ## Java Programming Language
+- [Java 바이트코드 구조](notes/Java%20Platform/Java%20바이트코드%20구조.md)
 - [Java Primitive Type(기본형) vs Reference Type(참조형)](notes/Java%20Platform/Java%20Primitive%20Type(기본형)%20vs%20Reference%20Type(참조형).md)
 - [자바에는 Call by reference가 없다. (항상 Call by value)](notes/Java%20Platform/자바에는%20Call%20by%20reference가%20없다.%20(항상%20Call%20by%20value).md)
 - [Java `==`, equals() 차이](notes/Java%20Platform/Java%20`==`,%20equals()%20차이.md)
 - [Java String 객체와 String 리터럴](notes/Java%20Platform/Java%20String%20객체와%20String%20리터럴.md)
+- [Java 클래스 로드, ClassLoader](notes/Java%20Platform/Java%20클래스%20로드,%20ClassLoader.md)
 
 
 
