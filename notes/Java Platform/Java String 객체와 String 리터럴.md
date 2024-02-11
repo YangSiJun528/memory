@@ -35,8 +35,8 @@ String str2 = "hello world"; // 리터럴 생성
 
 ## String 객체
 
-String 객체는 new를 사용해 String을 생성하면 생긴다.   
-(외부에서 받아서 String을 생성하는 경우도 String 객체로 생성된다. ex:Main 메서드, I/O)
+String 객체는 `new` 키워드를 사용해 String을 생성하면 생긴다.   
+(외부에서 받아서 String을 생성하는 경우도 String 객체로 생성된다. ex:Main 메서드 파라미터, I/O)
 
 Heap 영역애 저장되며, 같은 값을 가지더라도 다른 객체이므로 `==` 가 통하지 않는다.
 
@@ -44,7 +44,7 @@ Heap 영역애 저장되며, 같은 값을 가지더라도 다른 객체이므�
 `String.intern()` 을 사용해 String 객체를 String Constant Pool에 저장할 수 있다.  
 
 사용하면 문자열을 저장하고 객체의 참조를 반환한다.
-이미 저장된 문자열이라면 저장 된 객체의 참조를 반환한다.
+이미 저장된 문자열이면 저장 된 객체의 참조를 반환한다.
 
 
 # 기타 자료
