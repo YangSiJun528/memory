@@ -28,7 +28,7 @@ Jakarta EE에는 웹 페이지 생성, 트랜잭션 데이터베이스 읽기 �
 
 Jakarta EE API는 Java SE API를 기반으로 Jakarta Enterprise Beans, connectors, servlets, JSP(Java Server Pages) 등 여러 웹 서비스의 기술을 포함한다.
 
-![JavaEE Platform Specification Diagram](notes/Java%20Platform/imgs/java_ee_platform_specification_diagram.png)
+![JavaEE Platform Specification Diagram](notes/Java%20Platform/files/java_ee_platform_specification_diagram.png)
 
 #### 서블릿 컨테이너
 Jakarta EE의 여러 사양 중, Jakarta Servlet 사양을 구현하는 서버.   

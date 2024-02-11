@@ -19,7 +19,7 @@ OSS = Open Source Software
 상용 서비스 제공 여부, OpenJDK 기반 JDK 여부, 특수 목적의 선택 기준 등 여러 조건이 있다.    
 여려 JDK 구현체의 종류와 특징을 알기 쉬워서 가져옴.  
 
-![java_vender_guide_flowchart](notes/Java%20Platform/imgs/java_vender_guide_flowchart.png)
+![java_vender_guide_flowchart](notes/Java%20Platform/files/java_vender_guide_flowchart.png)
 
 # Reference
 [LINE의 OpenJDK 적용기: 호환성 확인부터 주의 사항까지](https://engineering.linecorp.com/en/blog/line-open-jdk)     
