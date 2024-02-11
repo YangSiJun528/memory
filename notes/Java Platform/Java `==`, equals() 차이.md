@@ -17,3 +17,4 @@
 # Reference
 - [Difference Between == and equals() in Java](https://www.linkedin.com/in/babar-shahzad-018035171/)
 - 자바의 정석
+- [Oracle Java SE 8 JLS 15.21](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html)
