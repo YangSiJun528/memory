@@ -22,6 +22,8 @@
 - [Java Primitive Type(기본형) vs Reference Type(참조형)](notes/Java%20Platform/Java%20Primitive%20Type(기본형)%20vs%20Reference%20Type(참조형).md)
 - [자바에는 Call by reference가 없다. (항상 Call by value)](notes/Java%20Platform/자바에는%20Call%20by%20reference가%20없다.%20(항상%20Call%20by%20value).md)
 - [Java `==`, equals() 차이](notes/Java%20Platform/Java%20`==`,%20equals()%20차이.md)
+- [Java String 객체와 String 리터럴](notes/Java%20Platform/Java%20String%20객체와%20String%20리터럴.md)
+
 
 
 ## etc
