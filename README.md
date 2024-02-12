@@ -24,6 +24,7 @@
 - [Java `==`, equals() 차이](notes/Java%20Platform/Java%20`==`,%20equals()%20차이.md)
 - [Java String 객체와 String 리터럴](notes/Java%20Platform/Java%20String%20객체와%20String%20리터럴.md)
 - [Java 클래스 로드, ClassLoader](notes/Java%20Platform/Java%20클래스%20로드,%20ClassLoader.md)
+- [JVM Run-Time Data Areas](notes/Java%20Platform/JVM%20Run-Time%20Data%20Areas.md)
 
 
 
