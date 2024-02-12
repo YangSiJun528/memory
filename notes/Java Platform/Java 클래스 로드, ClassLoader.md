@@ -50,7 +50,8 @@ JVM은 자바 애플리케이션을 클래스 로더(Class Loader)를 통해 읽
 	- 3가지 하위 단계로 나뉜다.
 		- 검증(Verifying): 읽어 들인 클래스가 자바 언어 명세(Java Language Specification) 및 JVM 명세에 명시된 대로 잘 구성되어 있는지 확인한다.
 		- 준비(Preparing): 클래스가 필요로 하는 메모리를 할당하고, 클래스에서 정의된 필드, 메서드, 인터페이스들을 나타내는 데이터 구조를 준비한다. (메모리 할당 + static 필드를 생성하고 기본값(실제 값이 아니다.)으로 설정하는 과정)
-		- 분석(Resolving): 클래스의 상수 풀 내 모든 심볼릭 레퍼런스를 다이렉트 레퍼런스로 변경한다.
+		- 해석(Resolving): 클래스의 상수 풀 내 모든 심볼릭 레퍼런스를 다이렉트 레퍼런스로 변경한다.
+			- 지연 링크를 사용하면 해석 과정은 클래스나 인터페이스가 초기화 된 후에 실행될 수도 있다.
 - 초기화: 클래스 변수들을 적절한 값으로 초기화한다. 즉, static initializer(static 블록)들을 수행하고, static 필드들을 설정된 값으로 초기화한다.
 
 ### 클래스 로드 과정 시작 시점
@@ -64,13 +65,17 @@ JVM은 자바 애플리케이션을 클래스 로더(Class Loader)를 통해 읽
 
 다른 객체에서 런타임 상수 풀에서 객체를 참조하거나, 리플렉션과 같은 Java SE에서 제공하는 클래스 관련 라이브러리 사용 시 로드가 시작된다.
 
-### 링킹
+다른 JVM Stack의 프레임에서 객체를 사용하려고 할 때, Dynamic linking(동적 연결)을 한다. 이 때, 클래스가 로드되지 않은 경우 사용한다.  
+
+(아마 정확한 시점은 어떤 메서드에서 로드하려는 클래스를 사용하는 시점인 것 같다. 아래 테스트 항목 참고)
+
+#### 링킹
 
 몇 규칙을 지키는 한 자유롭게 로드 시점을 결정할 수 있다. (이외에도 규칙이 더 있다, 자세한 건 공식문서 참고) 
 - 클래스나 인터페이스는 링킹되기 전에 완전히 로드된다.
 - 클래스나 인터페이스는 초기화되기 전에 완전히 검증되고 준비된다
 
-### 초기화
+#### 초기화
 
 > A class or interface type T will be initialized immediately before the first occurrence of any one of the following:
 > - T is a class and an instance of T is created.
@@ -224,7 +229,7 @@ SourceFile: "Main.java"
 
 Constant pool #16 을 보면 그냥 상수값 자체를 가져와서 사용하는 걸 알 수 있다. 
 
-### 클래스 로드/초기화 시점 차이 테스트
+### 클래스 로드 시점 테스트
 
 자바 공식문서를 보면 다음 경우에서 로드한다고 한다.
 - 다른 객체에서 런타임 상수 풀에서 객체를 참조
@@ -279,6 +284,60 @@ class Outer {
 생각해보면, 당연한 결과 같기도 하다.   
 상수 풀에 존재해서 사용할 수 있다는 것 만으로 로드하면 결국 사용하는 모든 클래스를 로드해야 할 테니까.
 
+
+##### 추가
+
+다른 메서드에서 호출하는 경우는 어떻게 되는가?
+
+```java
+package dev.yangsijun;  
+  
+import java.time.LocalTime;  
+  
+public class Main {  
+  public static void main(String[] args) throws InterruptedException {  
+    System.out.println(LocalTime.now());  
+    System.out.println("Start main method!");  
+    Thread.sleep(1000*5);  
+    System.out.println("Call another method!");  
+    another();  
+    System.out.println("End main method!");  
+    System.out.println(LocalTime.now());  
+  }  
+  
+  
+  public static void another() throws InterruptedException {  
+    System.out.println("Here Is another method!");  
+    System.out.println(LocalTime.now());  
+    Thread.sleep(1000*5);  
+    System.out.println(Outer.value);  
+  }  
+}  
+  
+class Outer {  
+  static String value = "> Outer 클래스의 static 필드 입니다.";  
+}
+```
+
+```
+22:16:41.911743
+Start main method!
+Call another method!
+Here Is another method!
+22:16:46.917113
+[10.150s][info][class,load] dev.yangsijun.Outer source: file:/Users/sijunyang/Documents/GitHub/testing_java/java/build/libs/java-1.0-SNAPSHOT.jar
+> Outer 클래스의 static 필드 입니다.
+End main method!
+22:16:51.921849
+```
+
+결과를 보면 `Outer`를 사용하는 `another()` 메서드에서 로드한다.
+
+또한 사용하기 직전에 로드된다.
+
+(추측: 일반적으론 클래스 초기화 시점과 동일한 것 같다.)
+
+[2.6.3. Dynamic linking](https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.5)를 보면 프레임 단위로 연결하면서 로드하기도 한다고 하긴 함.
 
 # Reference
 
