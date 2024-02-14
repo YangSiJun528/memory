@@ -36,7 +36,7 @@ JVM은 자바 애플리케이션을 클래스 로더(Class Loader)를 통해 읽
         - `BuiltinClassLoader`를 상속한다. Inner Static 클래스로 선언된다.
 - 사용자 정의 클래스 로더(User-Defined Class Loader): 애플리케이션 사용자가 직접 코드 상에서 생성해서 사용하는 클래스 로더이다.
     - 자바 API로 제공하는 `URLClassLoader`를 사용하거나, 직접 구현하여 사용한다.
-        - 외부의 `.jar`(객체)를 읽을 때 사용한다. - [Java SE 8 JavaDoc](https://docs.oracle.com/javase/8/docs/api/java/net/URLClassLoader.html)
+        - 외부의 `.jar`(객체)를 읽을 때 사용한다. - [Java SE 8 APIDoc](https://docs.oracle.com/javase/8/docs/api/java/net/URLClassLoader.html)
         - ex: Spring이 jar을 실행할 때 사용한다. - [공식문서](https://docs.spring.io/spring-boot/docs/current/reference/html/executable-jar.html), [설명 잘된 글](https://velog.io/@qudtjs0753/%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%B4-%EC%99%B8%EB%B6%80-jar%EB%A5%BC-%EB%B6%88%EB%9F%AC%EC%98%A4%EB%8A%94-%EB%B0%A9%EB%B2%95)
 
 ## ClassLoad 과정
