@@ -12,7 +12,6 @@
 - [Java Platform Edition - SE, ME, EE, FX, Card](notes/Java%20Platform/Java%20Platform%20Edition.md)
 - [Java EE(Jakarta EE)](notes/Java%20Platform/Java%20EE(Jakarta%20EE).md)
 - [Java Platform 연대기](notes/Java%20Platform/Java%20Platform%20연대기.md)
-- [Jigsaw란? - 아직 미완](notes/Java%20Platform/Jigsaw란?%20-%20아직%20미완.md)
 - [OpenJDK의 배경과 개념, OracleJDK와 유료화 문제 - OpenJDK ,JEP, OCA, OCTLA](notes/Java%20Platform/OpenJDK의%20배경과%20개념,%20OracleJDK와%20유료화%20문제%20-%20OpenJDK%20,JEP,%20OCA,%20OCTLA.md)
 - [자바가 발전하는 과정](notes/Java%20Platform/자바가%20발전하는%20과정.md)
 - [OpenJDK와 타 JDK와 비교 - JVM 비교](notes/Java%20Platform/OpenJDK와%20타%20JDK와%20비교%20-%20JVM%20비교.md)
@@ -30,8 +29,15 @@
 - [Java BigInteger, BigDecimal](notes/Java%20Platform/Java%20BigInteger,%20BigDecimal.md)
 
 
+## Algorithm
+- [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
+
+## Computer Science
+- [바이트코드와 가상머신 - 보완 필요](notes/Computer%20Science/바이트코드와%20가상머신%20-%20보완%20필요.md)
+
+## Spring
 
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
 
-- [바이트코드와 가상머신](notes/바이트코드와%20가상머신.md)
+

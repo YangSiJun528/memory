@@ -93,6 +93,8 @@ JVM은 자바 애플리케이션을 클래스 로더(Class Loader)를 통해 읽
 - T 는 최상위 클래스( [§7.6](https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html#jls-7.6 "7.6. 최상위 유형 선언") )이며 T ( [§8.1.3](https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.1.3 "8.1.3. 내부 클래스 및 둘러싸는 인스턴스") ) 내에 어휘적으로 중첩된 `assert`명령문( [§14.10](https://docs.oracle.com/javase/specs/jls/se8/html/jls-14.html#jls-14.10 "14.10. 주장문") )이 실행된다.
 	- Nested Class가 아니면 최상위 클래스이다.
 
+static 메서드의 경우, 클래스가 인스턴스화 된 것과 상관 없이 해당 static 메서드를 호출하기 전까지 초기화되지 않는다. (아마 다른 조건도 비슷할 듯 비슷할 듯)
+
 ## 테스트
 
 ### Static Final 테스트

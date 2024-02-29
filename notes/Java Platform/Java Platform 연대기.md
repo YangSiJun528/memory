@@ -66,7 +66,6 @@
 	- Java SE 9 출시
 		- Java Platform Module System(Jigsaw) 및 그 외 기능들 추가
 			- Jigsaw로 인해서 JRE는 더 이상 제공되지 않는다.
-			- 자세한 내용은 [Jigsaw란? - 아직 미완](notes/Java%20Platform/Jigsaw란?%20-%20아직%20미완.md) 참고
 	- Java EE 8 출시
 	- 오라클이 Java EE를 Eclipse 재단에 이관하기로 결정
 		- 이 시점 이후 Java EE를 JCP에서 다루지 않는다.
