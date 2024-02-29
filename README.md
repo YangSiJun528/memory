@@ -8,7 +8,6 @@
 - - -
 
 ## Java Platfrom
-
 - [Java Platform Edition - SE, ME, EE, FX, Card](notes/Java/Java%20Platform/Java%20Platform%20Edition.md)
 - [Java EE(Jakarta EE)](notes/Java/Java%20Platform/Java%20EE(Jakarta%20EE).md)
 - [Java Platform 연대기](notes/Java/Java%20Platform/Java%20Platform%20연대기.md)
@@ -29,6 +28,7 @@
 - [Java `==`, equals() 차이](notes/Java/Java%20Programming%20Language/Java%20`==`,%20equals()%20차이.md)
 - [Java String 객체와 String 리터럴](notes/Java/Java%20Programming%20Language/Java%20String%20객체와%20String%20리터럴.md)
 - [Java BigInteger, BigDecimal](notes/Java/Java%20Programming%20Language/Java%20BigInteger,%20BigDecimal.md)
+- [(내 생각) package-private 접근제어자를 사용해야 하는 경우와 아닌 경우](notes/Java/Java%20Programming%20Language/(내%20생각)%20package-private%20접근제어자를%20사용해야%20하는%20경우와%20아닌%20경우.md)
 
 
 ## Algorithm
