@@ -1,6 +1,6 @@
 - - -
 
-![](notes/Java%20Platform/files/Run-Time_Data_Area.png)
+![](notes/Java/files/Run-Time_Data_Area.png)
 JVM 런타임 데이터 영역을 다음과 같이 표시할 수 있다.
 
 위 이미지에서 "단위"는 생성 주기를 의미한다.   

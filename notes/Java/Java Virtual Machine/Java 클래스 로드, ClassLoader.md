@@ -11,7 +11,7 @@ JVM은 자바 애플리케이션을 클래스 로더(Class Loader)를 통해 읽
 
 ## ClassLoader 종류
 
-![class_loader](notes/Java%20Platform/files/class_loader.png)
+![class_loader](notes/Java/files/class_loader.png)
 
 - 부트스트랩 클래스 로더(Bootstrap Class Loader): JVM을 실행하기 위한 핵심 자바 API를 로드한다. 네이티브 코드로 구현되어 있고, parent를 가지지 않으며 null로 표현된다.
     - Java 9 이전

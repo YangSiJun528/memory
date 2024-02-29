@@ -37,7 +37,7 @@ JCP 프로그램에는 현재 자바의 다음 버전을 포함하여 많은 자
 JCP는 4가지 주요 단계가 있다.   
 `INITIATION -> DRAFT RELEASES -> FINAL RELEASE -> MAINTENANCE 
 
-![JSR_Flow](notes/Java%20Platform/files/JSR_Flow.png)
+![JSR_Flow](notes/Java/files/JSR_Flow.png)
 
 # Reference
 [FAQ: General JCP Questions](https://www.jcp.org/en/introduction/faq)     

@@ -65,9 +65,9 @@ Weak Generational Hypothesis는 아래 2가지 가설(전제, 경향)을 말한�
 
 지금은 거의 사용하지 않는 GC지만, 이후 설명할 내용에도 연관되어 있다.
 
-Heap 영역은 Young/Old 영역으로 나뉘어져 있다.(물리적으로 분리되어 있다. 또한 Heap에 Perm 영역이 있었으나 Java 8부터 제거되었다. [JDK8 버전 이후 제거된 JVM Permanent 영역](notes/Java%20Platform/JDK8%20버전%20이후%20제거된%20JVM%20Permanent%20영역.md) 참고)
+Heap 영역은 Young/Old 영역으로 나뉘어져 있다.(물리적으로 분리되어 있다. 또한 Heap에 Perm 영역이 있었으나 Java 8부터 제거되었다. [JDK8 버전 이후 제거된 JVM Permanent 영역](notes/Java/Java%20Virtual%20Machine/JDK8%20버전%20이후%20제거된%20JVM%20Permanent%20영역.md) 참고)
 
-![](notes/Java%20Platform/files/basic_heap_layout.png)
+![](notes/Java/files/basic_heap_layout.png)
 
 Young은 Eden, Survivor 0, Survivor1으로 나뉜다.
 
@@ -117,7 +117,7 @@ Old 영역에 있는 객체가 Young 영역의 객체를 참조할 때마다 기
 - Java 9부터 Deprecated, Java 14에서는 제거되었다.
 
 #### G1(Garbage First) GC
-![](notes/Java%20Platform/files/garbage_collector_heap_layout.png)
+![](notes/Java/files/garbage_collector_heap_layout.png)
 - CMS GC를 대체하기 위해서 만들어 졌다.
 	- 하드웨어가 점점 발전하면서 대용량 메모리에 적합한 솔루션을 제공하기 위해 나타났다.
 - 기존의 고전적인 Heap 구조와 달리 Region 단위를 사용해 영역을 동적으로 할당한다.
@@ -130,7 +130,7 @@ Old 영역에 있는 객체가 Young 영역의 객체를 참조할 때마다 기
 	- 캐시 테이블 대신, RSet(Remembered Set)을 사용해서 영역을 추적한다.
 
 #### [ZGC](https://wiki.openjdk.org/display/zgc)(The Z Garbage Collector)
-![](notes/Java%20Platform/files/ZGC_layout.png)
+![](notes/Java/files/ZGC_layout.png)
 - Java 15에 release 되었다.
 - 비세대적 접근 방식을 사용하여 Young/Old 객체를 구분하지 않는다.
 - ZPage라는 논리적인 단위로 구분한다.
