@@ -119,5 +119,5 @@ ERD 설계 관련해서 피드백을 받고 싶고, 수정이 발생할 수 있�
 8. **인증:**
 	- `POST /auth/email/code/send`: 로그인 코드를 이메일로 전송한다.
 	- `POST /auth/email/code/verify`: 인증 코드가 적절하고 사용자가 동일한 세션인지 확인한다.
-	- `GET /auth/oauth/login-page-redirection`: OAuth 로그인 페이지로 리다이렉트 시 사용
-	- `GET /auth/oauth/code`: 서버로 Authorization Code 코드 전송 시 사용
+	- `GET /auth/oauth/login-page-redirection`: OAuth 로그인 페이지로 리다이렉트 시 사용
+	- `GET /auth/oauth/code`: 서버로 Authorization Code 코드 전송 시 사용
