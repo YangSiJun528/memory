@@ -47,7 +47,7 @@ celog가 구현할 기능을 정리했다. (velog의 기능이 아니다.)
 
 위의 기능을 기준으로 프로토타입을 디자인하였다.
 
-![prototype_design](flab/week2/prototype_design.png)
+![prototype_design](./prototype_design.png)
 
 [kakao oven](https://ovenapp.io/view/SuEVqgcBEXPsejjnk4G57VIqwCOsbqPf)에서도 볼 수 있다. (방향키를 사용해서 페이지를 넘길 수 있다.)
 
@@ -55,7 +55,7 @@ celog가 구현할 기능을 정리했다. (velog의 기능이 아니다.)
 
 dbdiagram.io를 사용해서 작성했다.    
 
-![erd-v1](flab/week2/erd-v1.png)
+![erd-v1](./erd-v1.png)
 
 [dbdiagram.io 페이지](https://dbdiagram.io/d/celog-65e437e0cd45b569fb627048)에서 index 설계나 더 자세한 설명을 확인할 수 있다.   
 (요소가 추가/변경 되어서 위 이미지와는 다른 구조를 가질 수도 있다.)
