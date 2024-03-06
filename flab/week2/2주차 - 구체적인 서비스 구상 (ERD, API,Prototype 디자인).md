@@ -42,6 +42,18 @@ celog가 구현할 기능을 정리했다. (velog의 기능이 아니다.)
 	- 읽으면 읽음 표시가 된다.
 	- 누군가 본인의 글에 북마크를 하거나 본인을 팔로우하는 등, 여러 이벤트 발생 시 알림이 온다.
 
+#### 로그인/회원가입 세부 설명
+id/pw가 아니라 이메일로만 가입할 수 있고, 메일로 보내진 링크를 통해서 인증(로그인/회원가입)을 할 수 있다.     
+OAuth2를 사용해서 인증할 수도 있다.
+
+velopert라는 개발자 한 명이 개발한 서비스라는 점을 보았을 때, 개인정보 관리 문제를 때문에 이러한 인증 방식을 채택한 것이 아닌가 싶다.       
+비밀번호를 저장하는 서비스의 경우에 [비밀번호 작성규칙](https://law.go.kr/LSW/lawBodyComparePrint.do?leftSeq=2100000204678&rightSeq=2100000204677&leftEfYd=&rightEfYd=&leftGubun=AdmRul&rightGubun=AdmRul)을 지켜야 하고, 기업이 아니라면 사람들의 비밀번호 같은 개인정보를 저장하는 것도 무리가 있을 것 같다.
+
+##### ERD의 `oauth_provider_id`에 관해서
+우선 oauth 인증인 경우 `oauth_provider_id` 값이 존재해야 한다. 또한, `oauth_provider_id`를 사용해서 인증할 수 있다.      
+github 계정으로 oauth를 진행하는 경우, `email` 값이 `null`일 수도 있기 때문이다.
+
+그래서 oauth 인증 시, `email`이 있다면 이메일로 인증하고, `email`이 없다면 `oauth_provider_id`를 사용해서 사용자를 식별하고 한다.
 
 ## 프로토타입 디자인
 
