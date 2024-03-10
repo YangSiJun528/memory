@@ -43,6 +43,7 @@
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
+- [Git 브랜치 관리 전략](notes/Github/Git%20브랜치%20관리%20전략.md)
 
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
