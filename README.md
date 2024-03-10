@@ -41,7 +41,7 @@
 
 ## Spring
 
-## Github
+## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
 
 ## etc
