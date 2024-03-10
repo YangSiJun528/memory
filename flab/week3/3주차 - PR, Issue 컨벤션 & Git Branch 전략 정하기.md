@@ -61,7 +61,7 @@ github flow를 사용한다.
 - 짧고 설명이 포함된 브랜치 이름을 사용한다. 
 	- ex: `increase-test-timeout`, `add-code-of-conduct`
 	- `{이슈 번호}-{브랜치 이름}`을 사용한다.
-		- f-lab 가이드 영상에서 새로운 기능을 추가할때는 `feature/{이슈 번호}`를 사용한다. 다만 이걸 지키지 않는 프로젝트도 있어서 필수는 아닌 것 같다.
+		- (f-lab 가이드 영상에서 새로운 기능을 추가할때는 `feature/{이슈 번호}`를 사용한다. 다만 이걸 지키지 않는 프로젝트도 있어서 필수는 아닌 것 같다.)
 
 ## 참고한 자료
 - [Inpa Dev 👨‍💻:티스토리 - [GIT] 📈 깃 브랜치 전략 정리 - Github Flow / Git Flow](https://inpa.tistory.com/entry/GIT-%E2%9A%A1%EF%B8%8F-github-flow-git-flow-%F0%9F%93%88-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%84%EB%9E%B5) 
