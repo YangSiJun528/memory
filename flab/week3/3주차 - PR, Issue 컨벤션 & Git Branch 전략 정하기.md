@@ -21,8 +21,9 @@ PR 템플릿이나 Issue 템플릿은 이후에 프로젝트를 진행하면서 
 
 PR 제목과 내용은 커밋 컨벤션과 크게 다르지 않았다.
 
-PR이 머지되는 과정이 좀 신기했는데, 기여자가 [PR](https://github.com/angular/angular/pull/54746)을 작성하고 관리자는 머지 대신 PR에`action: merge` labels을 붙인다.
-그 다음 관리자가 기여자의 작업을 main 브랜치로 가져와서 [commit](https://github.com/angular/angular/commit/2258ac7a32bf83dc3e33a7ff9526b501ea95e33d)하고 기존 PR은 close한다.
+PR이 머지되는 과정이 좀 신기했는데,    
+기여자가 [PR](https://github.com/angular/angular/pull/54746)을 작성하고 관리자는 머지 대신 PR에`action: merge` labels을 붙인다.  
+그 다음 관리자가 기여자의 작업을 main 브랜치로 가져와서 [commit](https://github.com/angular/angular/commit/2258ac7a32bf83dc3e33a7ff9526b501ea95e33d)하고 기존 PR은 close한다. 
 
 아마 커밋 컨벤션을 지키기 위해서 이렇게 한 것 같은데, 결과만 보자면 `Squash & Merge`이랑 비슷하다.
 
@@ -32,7 +33,8 @@ PR이 머지되는 과정이 좀 신기했는데, 기여자가 [PR](https://gith
 
 `Squash & Merge`를 사용해서 PR 단위로 머지하기로 했다.
 
-`main` 브랜치 기준으로 commit log를 볼때, 기능 단위로 작성된 log가 가독성이 좋을거라고 생각해서 `Squash & Merge`로 결정하였다.
+`main` 브랜치 기준으로 commit log를 볼때,  
+자잘한 commit이 있는 것보다 작업 단위의 commit이 있는게 가독성이 좋다고 생각했다. 
 
 ## Issue 컨벤션 정하기
 개인 프로젝트인 만큼 내가 할 일을 적는 것 외에는 용도가 없다.
