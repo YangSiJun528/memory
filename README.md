@@ -40,6 +40,7 @@
 - [바이트코드와 가상머신 - 보완 필요](notes/Computer%20Science/바이트코드와%20가상머신%20-%20보완%20필요.md)
 
 ## Spring
+- [(내 생각) 웹 애플리케이션의 효과적인 예외 처리 전략](notes/Spring/(내%20생각)%20웹%20애플리케이션의%20효과적인%20예외%20처리%20전략.md)
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
@@ -50,6 +51,7 @@
 - [Test Double 정리 - 단위 테스트에서 사용되는 객체들](notes/etc/Test%20Double%20정리%20-%20단위%20테스트에서%20사용되는%20객체들.md)
 - [실무 DB에서 FK를 지정하지 않는 이유 - github이 외래키를 쓰지 않는 이유](notes/etc/실무%20DB에서%20FK를%20지정하지%20않는%20이유%20-%20github이%20외래키를%20쓰지%20않는%20이유.md)
 - [URL에 언더스코어(_) 보다 대시(-)를 사용해야 하는 이유](notes/etc/URL에%20언더스코어(_)%20보다%20대시(-)를%20사용해야%20하는%20이유.md)
+- [HTTP API 에러 응답 포멧 표준 - RFC7807, RFC9457](notes/etc/HTTP%20API%20에러%20응답%20포멧%20표준%20-%20RFC7807,%20RFC9457.md)
 
 - - - 
 # [F-lab] celog 프로젝트 기록
@@ -63,4 +65,6 @@
 - 3주차 (2024.3.7.~2024.3.13)
 	- [3주차 - 커밋, 코딩 컨벤션 정하고 적용하기](flab/week3/3주차%20-%20커밋,%20코딩%20컨벤션%20정하고%20적용하기.md)
 	- [3주차 - PR, Issue 컨벤션 & Git Branch 전략 정하기](flab/week3/3주차%20-%20PR,%20Issue%20컨벤션%20&%20Git%20Branch%20전략%20정하기.md)
+	- [3주차 - JPA Entity, Repository 객체 추가](flab/week3/3주차%20-%20JPA%20Entity,%20Repository%20객체%20추가.md)
+	- 
 
