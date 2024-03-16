@@ -41,6 +41,7 @@
 
 ## Spring
 - [(내 생각) 웹 애플리케이션의 효과적인 예외 처리 전략](notes/Spring/(내%20생각)%20웹%20애플리케이션의%20효과적인%20예외%20처리%20전략.md)
+- [Spring MVC - 전역 예외 처리 시, ResponseEntityExceptionHandler를 상속해야 하는 이유](notes/Spring/Spring%20MVC%20-%20전역%20예외%20처리%20시,%20ResponseEntityExceptionHandler를%20상속해야%20하는%20이유.md)
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
