@@ -8,7 +8,7 @@
 
 ### 추가 자료
 
-![](flab/week3/Pasted%20image%2020240311203256.png)
+![](flab/week3/erd-v2.png)
 
 DBML 언어로 표시
 ```DBML
