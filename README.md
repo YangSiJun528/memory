@@ -73,4 +73,5 @@
 	- [3주차 - PR, Issue 컨벤션 & Git Branch 전략 정하기](flab/week3/3주차%20-%20PR,%20Issue%20컨벤션%20&%20Git%20Branch%20전략%20정하기.md)
 	- [3주차 - JPA Entity, Repository 객체 추가](flab/week3/3주차%20-%20JPA%20Entity,%20Repository%20객체%20추가.md)
 	- [3주차 - 그 외 작업들](flab/week3/3주차%20-%20그%20외%20작업들.md)
-
+- 4주차 (2024.3.14.~2024.3.20)
+	- [4주차 - 프로젝트 방향성에 대한 고민](flab/week4/4주차%20-%20프로젝트%20방향성에%20대한%20고민.md)
