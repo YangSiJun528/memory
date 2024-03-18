@@ -51,6 +51,7 @@
 > 아직 분류 기준이 정확하지 않은 노트들
 - [Test Double 정리 - 단위 테스트에서 사용되는 객체들](notes/etc/Test%20Double%20정리%20-%20단위%20테스트에서%20사용되는%20객체들.md)
 - [실무 DB에서 FK를 지정하지 않는 이유 - github이 외래키를 쓰지 않는 이유](notes/etc/실무%20DB에서%20FK를%20지정하지%20않는%20이유%20-%20github이%20외래키를%20쓰지%20않는%20이유.md)
+- [Database Table Naming Conventions](notes/etc/Database%20Table%20Naming%20Conventions.md)
 - [URL에 언더스코어(_) 보다 대시(-)를 사용해야 하는 이유](notes/etc/URL에%20언더스코어(_)%20보다%20대시(-)를%20사용해야%20하는%20이유.md)
 - [HTTP API 에러 응답 포멧 표준 - RFC7807, RFC9457](notes/etc/HTTP%20API%20에러%20응답%20포멧%20표준%20-%20RFC7807,%20RFC9457.md)
 
