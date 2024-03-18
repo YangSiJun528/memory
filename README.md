@@ -67,5 +67,5 @@
 	- [3주차 - 커밋, 코딩 컨벤션 정하고 적용하기](flab/week3/3주차%20-%20커밋,%20코딩%20컨벤션%20정하고%20적용하기.md)
 	- [3주차 - PR, Issue 컨벤션 & Git Branch 전략 정하기](flab/week3/3주차%20-%20PR,%20Issue%20컨벤션%20&%20Git%20Branch%20전략%20정하기.md)
 	- [3주차 - JPA Entity, Repository 객체 추가](flab/week3/3주차%20-%20JPA%20Entity,%20Repository%20객체%20추가.md)
-	- 
+	- [3주차 - 그 외 작업들](flab/week3/3주차%20-%20그%20외%20작업들.md)
 
