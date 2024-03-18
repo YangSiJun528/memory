@@ -8,7 +8,7 @@
 
 ### 추가 자료
 
-![](flab/week3/erd-v2.png)
+![img](flab/week3/erd-v2.png)
 
 DBML 언어로 표시
 ```DBML
