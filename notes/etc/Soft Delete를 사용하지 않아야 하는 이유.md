@@ -19,7 +19,12 @@
 
 ## 대안책
 - history or audit 테이블 사용하기
-	- ex: 데이터를 직렬화하여 audit 로그에 작성, 삭제된 데이터를 저장하는 테이블 사용
+	- ex: 데이터를 직렬화하여 audit 로그에 작성, 삭제된 데이터를 저장하는 테이블(미러 테이블) 사용
+
+## 실무에선?
+flab 멘토님에게 물어본 결과, 실제로는 Soft Delete를 많이 사용한다고 한다.   
+삭제된 데이터의 비율은 적고(5% 이하, 인덱스 조건을 사용할 정도는 아니라 이렇게 말씀하신 듯?) 분리해서 얻는 복잡도와 노력 대비 output이 높지 않기 때문이라고 한다.
+
 # References
 - [The Day Soft Deletes Caused Chaos](https://blog.bemi.io/soft-deleting-chaos/)
 - [Why soft deletes are evil and what to do instead](https://jameshalsall.co.uk/posts/why-soft-deletes-are-evil-and-what-to-do-instead)
