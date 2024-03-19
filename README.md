@@ -33,6 +33,7 @@
 - [(내 생각) package-private 접근제어자를 사용해야 하는 경우와 아닌 경우](notes/Java/Java%20Programming%20Language/(내%20생각)%20package-private%20접근제어자를%20사용해야%20하는%20경우와%20아닌%20경우.md)
 - [Java package-info.java 이란?](notes/Java/Java%20Programming%20Language/Java%20package-info.java%20이란?.md)
 - [Java - Map.of(), Map.ofEntries(), ImmutableCollections.MapN](notes/Java/Java%20Programming%20Language/Java%20-%20Map.of(),%20Map.ofEntries(),%20ImmutableCollections.MapN.md)
+- [DTO(Data Transfer Object) - VO(Value Object)](notes/etc/DTO(Data%20Transfer%20Object)%20-%20VO(Value%20Object).md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
