@@ -51,6 +51,9 @@
 - [GIt과 Github 차이](notes/Github/GIt과%20Github%20차이.md)
 - [Github - Fork와 Upstream & Downstream](notes/Github/Github%20-%20Fork와%20Upstream%20&%20Downstream.md)
 
+## Infra & DevOps
+- [devops - CI-CD 개념](notes/Infra%20&%20DevOps/devops%20-%20CI-CD%20개념.md)
+
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
 - [Test Double 정리 - 단위 테스트에서 사용되는 객체들](notes/etc/Test%20Double%20정리%20-%20단위%20테스트에서%20사용되는%20객체들.md)
