@@ -42,6 +42,9 @@
 
 [공식문서 - 2.8.10. @ConfigurationProperties vs. @Value](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config.typesafe-configuration-properties.vs-value-annotation)
 
+## 그 외 읽어보면 좋을 자료
+- https://www.baeldung.com/properties-with-spring
+- https://devocean.sk.com/blog/techBoardDetail.do?ID=163415
 
 # References
 - [Core Features- 2. Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config)
