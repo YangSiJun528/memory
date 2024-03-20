@@ -34,6 +34,8 @@
 - [Java package-info.java 이란?](notes/Java/Java%20Programming%20Language/Java%20package-info.java%20이란?.md)
 - [Java - Map.of(), Map.ofEntries(), ImmutableCollections.MapN](notes/Java/Java%20Programming%20Language/Java%20-%20Map.of(),%20Map.ofEntries(),%20ImmutableCollections.MapN.md)
 - [DTO(Data Transfer Object) - VO(Value Object)](notes/etc/DTO(Data%20Transfer%20Object)%20-%20VO(Value%20Object).md)
+- [JavaBeans](notes/Java/Java%20Programming%20Language/JavaBeans.md)
+- [Java Bean Validation - JSR 303, JSR 380](notes/Java/Java%20Programming%20Language/Java%20Bean%20Validation%20-%20JSR%20303,%20JSR%20380.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
@@ -45,6 +47,7 @@
 - [(내 생각) 웹 애플리케이션의 효과적인 예외 처리 전략](notes/Spring/(내%20생각)%20웹%20애플리케이션의%20효과적인%20예외%20처리%20전략.md)
 - [Spring MVC - 전역 예외 처리 시, ResponseEntityExceptionHandler를 상속해야 하는 이유](notes/Spring/Spring%20MVC%20-%20전역%20예외%20처리%20시,%20ResponseEntityExceptionHandler를%20상속해야%20하는%20이유.md)
 - [SpringBoot Properties 관리, 커스텀 Properties 관리하기](notes/Spring/SpringBoot%20Properties%20관리,%20커스텀%20Properties%20관리하기.md)
+- [Spring Bean Validation](notes/Spring/Spring%20Bean%20Validation.md)
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
