@@ -53,6 +53,7 @@
 
 ## Infra & DevOps
 - [devops - CI-CD 개념](notes/Infra%20&%20DevOps/devops%20-%20CI-CD%20개념.md)
+- [Private한 환경변수 관리하는 법](notes/Infra%20&%20DevOps/Private한%20환경변수%20관리하는%20법.md)
 
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
