@@ -14,6 +14,7 @@ Spring에서 [Java Bean Validation - JSR 303, JSR 380](notes/Java/Java%20Program
 		- Spring 프레임워크에서 제공한다.
 		- AOP 기반으로 동작하며, `MethodValidationInterceptor`가 클래스에 등록된다.
 			- 이로 인해 계층에 무관하게 사용 가능하다.
+			- 프록시 객체를 제공해 주는 것이므로 사용하려는 변수, 파라미터 등에 `@Valid`를 입력해야 한다.
 		- `MethodValidationAdapter`가 Validation을 수행한다.
 			- 이는 Spring의 `MethodValidator` 인터페이스의 구현체로, 기존 Bean Validation Spec의 `Validator`를 사용한다. (Adapter 패턴, 내부 구현으로는 `SpringValidatorAdapter`를 사용하는 것 같다.)
 		- `ConstraintViolationException` 예외가 발생한다. 500이 발생한다.
