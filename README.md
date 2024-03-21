@@ -37,6 +37,8 @@
 - [JavaBeans](notes/Java/Java%20Programming%20Language/JavaBeans.md)
 - [Java Bean Validation - JSR 303, JSR 380](notes/Java/Java%20Programming%20Language/Java%20Bean%20Validation%20-%20JSR%20303,%20JSR%20380.md)
 - [Optional을 올바르게 사용하는 방법](notes/Java/Java%20Programming%20Language/Optional을%20올바르게%20사용하는%20방법.md)
+- [JAVA - Wrapper & Auto boxing & Auto Unboxing & 형변환](notes/Java/Java%20Programming%20Language/JAVA%20-%20Wrapper%20&%20Auto%20boxing%20&%20Auto%20Unboxing%20&%20형변환.md)
+- [JAVA - Iterable & Iterator의 정의와 C Style, for-each, Iterator의 차이](notes/Java/Java%20Programming%20Language/JAVA%20-%20Iterable%20&%20Iterator의%20정의와%20C%20Style,%20for-each,%20Iterator의%20차이.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
@@ -87,3 +89,4 @@
 	- [3주차 - 그 외 작업들](flab/week3/3주차%20-%20그%20외%20작업들.md)
 - 4주차 (2024.3.14.~2024.3.20)
 	- [4주차 - 프로젝트 방향성에 대한 고민](flab/week4/4주차%20-%20프로젝트%20방향성에%20대한%20고민.md)
+	- [4주차 - 진행한 작업들](flab/week4/4주차%20-%20진행한%20작업들.md)
