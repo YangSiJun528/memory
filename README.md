@@ -36,6 +36,7 @@
 - [DTO(Data Transfer Object) - VO(Value Object)](notes/etc/DTO(Data%20Transfer%20Object)%20-%20VO(Value%20Object).md)
 - [JavaBeans](notes/Java/Java%20Programming%20Language/JavaBeans.md)
 - [Java Bean Validation - JSR 303, JSR 380](notes/Java/Java%20Programming%20Language/Java%20Bean%20Validation%20-%20JSR%20303,%20JSR%20380.md)
+- [Optional을 올바르게 사용하는 방법](notes/Java/Java%20Programming%20Language/Optional을%20올바르게%20사용하는%20방법.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
