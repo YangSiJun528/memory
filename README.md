@@ -71,6 +71,7 @@
 - [HTTP API 에러 응답 포멧 표준 - RFC7807, RFC9457](notes/etc/HTTP%20API%20에러%20응답%20포멧%20표준%20-%20RFC7807,%20RFC9457.md)
 - [Soft Delete를 사용하지 않아야 하는 이유](notes/etc/Soft%20Delete를%20사용하지%20않아야%20하는%20이유.md)
 - [Blocking-NonBlocking-Synchronous-Asynchronous](notes/Computer%20Science/Blocking-NonBlocking-Synchronous-Asynchronous.md)
+- [Gradle에서 JaCoCo 도입하기](notes/etc/Gradle에서%20JaCoCo%20도입하기.md)
 
 
 - - - 
@@ -91,3 +92,5 @@
 	- [4주차 - 프로젝트 방향성에 대한 고민](flab/week4/4주차%20-%20프로젝트%20방향성에%20대한%20고민.md)
 	- [4주차 - 진행한 작업들](flab/week4/4주차%20-%20진행한%20작업들.md)
 	- [4주차 - 화상 멘토링 내용 요약](flab/week4/4주차%20-%20화상%20멘토링%20내용%20요약.md)
+- 5주차 (2024.3.21.~2024.3.27)
+	- [5주차 - 진행한 작업들](flab/week5/5주차%20-%20진행한%20작업들.md)
