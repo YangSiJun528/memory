@@ -10,10 +10,10 @@
 	- (내 생각) 결국 캡슐화를 위한거 아닌가? - (최소한의 필수 데이터만 제공, 본인 아래 의존성 숨기기)  
 - VO
 	- 어떠한 값 그 자체 (Long, BigDecimal, URL 같이 어떠한 "값")
-	- 그러므로 특정한 규칙에 따라 같은 객체인지 판단한다. (`equals()`/`hashCode()` override)
-		- 주로 모든 필드가 같은 값을 가지는지로 판단한다.
+	- 그러므로 내부 값에 의해 동등성이 판단된다. (`equals()`/`hashCode()` override)
 	- 필요에 따라 비즈니스 로직을 가질 수 있으나 꼭 가져야 하는건 아니다. (**상관없다**)
 
 # References
 - [DTO vs VO](https://velog.io/@taehee-kim-dev/DTO-vs-VO)
 - [DTO vs VO vs Entity](https://tecoble.techcourse.co.kr/post/2021-05-16-dto-vs-vo-vs-entity/)
+- [D2 Naver - 백엔드 개발자를 꿈꾸는 학생개발자에게](https://d2.naver.com/news/3435170)
