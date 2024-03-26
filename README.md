@@ -39,6 +39,8 @@
 - [Optional을 올바르게 사용하는 방법](notes/Java/Java%20Programming%20Language/Optional을%20올바르게%20사용하는%20방법.md)
 - [JAVA - Wrapper & Auto boxing & Auto Unboxing & 형변환](notes/Java/Java%20Programming%20Language/JAVA%20-%20Wrapper%20&%20Auto%20boxing%20&%20Auto%20Unboxing%20&%20형변환.md)
 - [JAVA - Iterable & Iterator의 정의와 C Style, for-each, Iterator의 차이](notes/Java/Java%20Programming%20Language/JAVA%20-%20Iterable%20&%20Iterator의%20정의와%20C%20Style,%20for-each,%20Iterator의%20차이.md)
+- [Java - DB 관련 기술 - JDBC, SQL Mapper, JPA](notes/Java/Java%20Platform/Java%20-%20DB%20관련%20기술%20-%20JDBC,%20SQL%20Mapper,%20JPA.md)
+- [JPA 개념정리](notes/Java/Java%20Platform/JPA%20개념정리.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
@@ -61,6 +63,7 @@
 ## Infra & DevOps
 - [devops - CI-CD 개념](notes/Infra%20&%20DevOps/devops%20-%20CI-CD%20개념.md)
 - [Private한 환경변수 관리하는 법](notes/Infra%20&%20DevOps/Private한%20환경변수%20관리하는%20법.md)
+- [IaaS, PaaS, SaaS, DBaaS](notes/Infra%20&%20DevOps/IaaS,%20PaaS,%20SaaS,%20DBaaS.md)
 
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
