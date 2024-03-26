@@ -40,7 +40,7 @@
 - [JAVA - Wrapper & Auto boxing & Auto Unboxing & 형변환](notes/Java/Java%20Programming%20Language/JAVA%20-%20Wrapper%20&%20Auto%20boxing%20&%20Auto%20Unboxing%20&%20형변환.md)
 - [JAVA - Iterable & Iterator의 정의와 C Style, for-each, Iterator의 차이](notes/Java/Java%20Programming%20Language/JAVA%20-%20Iterable%20&%20Iterator의%20정의와%20C%20Style,%20for-each,%20Iterator의%20차이.md)
 - [Java - DB 관련 기술 - JDBC, SQL Mapper, JPA](notes/Java/Java%20Platform/Java%20-%20DB%20관련%20기술%20-%20JDBC,%20SQL%20Mapper,%20JPA.md)
-- [JPA 개념정리](notes/Java/Java%20Platform/JPA%20개념정리.md)
+- [JPA(Java Persistence API) 개념정리](notes/Java/Java%20Platform/JPA(Java%20Persistence%20API)%20개념정리.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
