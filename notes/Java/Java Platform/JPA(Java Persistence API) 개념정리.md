@@ -3,7 +3,7 @@
 
 ### JPA 개념/등장
 
-JPA(Java Persistence API)란, 자바 진영의 ORM 기술 표준이다.
+JPA(Java Persistence API)란, 자바 진영의 ORM 기술 표준이다.
 
 SQL 의존적인 개발의 문제(객체지향적인 방식과 불일치 발생)을 해결하기 위해 데이터를 객체로 다루는 ORM이 등장하였다.
 
@@ -77,7 +77,7 @@ ORM은 DB를 객체로 다룰 수 있도록 중간에서 매핑해주는 프레�
 	- 발생 조건
 		- JPQL 쿼리 실행
 			- JPQL은 영속 컨텍스트를 읽지 않고 DB에 요청을 보내기 때문에 현재 작업 상태를 DB와 동기화해야 함
-		- 트랜잭션 커밋
+		- 트랜잭션 커밋 - 즉, flush는 커밋과는 별개이다. (트랜잭션은 `EntityManager.getTransaction()`을 통해서 `EntityTransaction`를 가져온다.)
 		- 직접 메서드 호출
 - JPA 연관관계 
 	- 엔티티에서 다른 엔티티를 필드로 가지기 위해서 사용한다.

@@ -41,6 +41,7 @@
 - [JAVA - Iterable & Iterator의 정의와 C Style, for-each, Iterator의 차이](notes/Java/Java%20Programming%20Language/JAVA%20-%20Iterable%20&%20Iterator의%20정의와%20C%20Style,%20for-each,%20Iterator의%20차이.md)
 - [Java - DB 관련 기술 - JDBC, SQL Mapper, JPA](notes/Java/Java%20Platform/Java%20-%20DB%20관련%20기술%20-%20JDBC,%20SQL%20Mapper,%20JPA.md)
 - [JPA(Java Persistence API) 개념정리](notes/Java/Java%20Platform/JPA(Java%20Persistence%20API)%20개념정리.md)
+- [Java - Annotation(어노테이션)](notes/Java/Java%20Programming%20Language/Java%20-%20Annotation(어노테이션).md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
@@ -53,6 +54,7 @@
 - [Spring MVC - 전역 예외 처리 시, ResponseEntityExceptionHandler를 상속해야 하는 이유](notes/Spring/Spring%20MVC%20-%20전역%20예외%20처리%20시,%20ResponseEntityExceptionHandler를%20상속해야%20하는%20이유.md)
 - [SpringBoot Properties 관리, 커스텀 Properties 관리하기](notes/Spring/SpringBoot%20Properties%20관리,%20커스텀%20Properties%20관리하기.md)
 - [Spring Bean Validation](notes/Spring/Spring%20Bean%20Validation.md)
+- [스프링에서 사용하는 Reflection - DI, AOP](notes/Spring/스프링에서%20사용하는%20Reflection%20-%20DI,%20AOP.md)
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
@@ -72,9 +74,10 @@
 - [Database Table Naming Conventions](notes/etc/Database%20Table%20Naming%20Conventions.md)
 - [URL에 언더스코어(_) 보다 대시(-)를 사용해야 하는 이유](notes/etc/URL에%20언더스코어(_)%20보다%20대시(-)를%20사용해야%20하는%20이유.md)
 - [HTTP API 에러 응답 포멧 표준 - RFC7807, RFC9457](notes/etc/HTTP%20API%20에러%20응답%20포멧%20표준%20-%20RFC7807,%20RFC9457.md)
-- [Soft Delete를 사용하지 않아야 하는 이유](notes/etc/Soft%20Delete를%20사용하지%20않아야%20하는%20이유.md)
+- [Soft Delete를 사용하지 않아야 하는 이유와 반론](notes/etc/Soft%20Delete를%20사용하지%20않아야%20하는%20이유와%20반론.md)
 - [Blocking-NonBlocking-Synchronous-Asynchronous](notes/Computer%20Science/Blocking-NonBlocking-Synchronous-Asynchronous.md)
 - [Gradle에서 JaCoCo 도입하기](notes/etc/Gradle에서%20JaCoCo%20도입하기.md)
+- [권·편·장·절·관·조·항·호·목](notes/etc/권·편·장·절·관·조·항·호·목.md)
 
 
 - - - 
@@ -97,3 +100,5 @@
 	- [4주차 - 화상 멘토링 내용 요약](flab/week4/4주차%20-%20화상%20멘토링%20내용%20요약.md)
 - 5주차 (2024.3.21.~2024.3.27)
 	- [5주차 - 진행한 작업들](flab/week5/5주차%20-%20진행한%20작업들.md)
+- 6주차 (2024.3.21.~2024.3.27)
+	- 
