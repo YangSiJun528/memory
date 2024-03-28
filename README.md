@@ -57,6 +57,8 @@
 - [SpringBoot Properties 관리, 커스텀 Properties 관리하기](notes/Spring/SpringBoot%20Properties%20관리,%20커스텀%20Properties%20관리하기.md)
 - [Spring Bean Validation](notes/Spring/Spring%20Bean%20Validation.md)
 - [스프링에서 사용하는 Reflection - DI, AOP](notes/Spring/스프링에서%20사용하는%20Reflection%20-%20DI,%20AOP.md)
+- [스프링의 트랜잭션(Transaction)](notes/Spring/스프링의%20트랜잭션(Transaction).md)
+- [Spring Data JPA - OSIV(Open Session In View)](notes/Spring/Spring%20Data%20JPA%20-%20OSIV(Open%20Session%20In%20View).md)
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
