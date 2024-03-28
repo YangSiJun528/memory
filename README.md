@@ -51,6 +51,8 @@
 
 ## Spring
 - [(내 생각) 웹 애플리케이션의 효과적인 예외 처리 전략](notes/Spring/(내%20생각)%20웹%20애플리케이션의%20효과적인%20예외%20처리%20전략.md)
+- [Spring MVC - 예외처리 HandlerExceptionResolver](notes/Spring/Spring%20MVC%20-%20예외처리%20HandlerExceptionResolver.md)
+- [Spring MVC - @ControllerAdvice 동작 원리](notes/Spring/Spring%20MVC%20-%20@ControllerAdvice%20동작%20원리.md)
 - [Spring MVC - 전역 예외 처리 시, ResponseEntityExceptionHandler를 상속해야 하는 이유](notes/Spring/Spring%20MVC%20-%20전역%20예외%20처리%20시,%20ResponseEntityExceptionHandler를%20상속해야%20하는%20이유.md)
 - [SpringBoot Properties 관리, 커스텀 Properties 관리하기](notes/Spring/SpringBoot%20Properties%20관리,%20커스텀%20Properties%20관리하기.md)
 - [Spring Bean Validation](notes/Spring/Spring%20Bean%20Validation.md)

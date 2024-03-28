@@ -20,6 +20,8 @@
 
 정리해보면,
 - Spring MVC 에러를 처리하는 기본 클래스이다.
+- `@ControllerAdvice`를 사용하는 기본 클래스이다. 
+	- `@ExceptionHandler`를 사용하므로 실제 예외처리는 HandlerExceptionResolver가 수행한다. - 참고 [Spring MVC - 예외처리 HandlerExceptionResolver](notes/Spring/Spring%20MVC%20-%20예외처리%20HandlerExceptionResolver.md)
 - 상속하여 기존 MVC의 에러 처리 방식을 편리하게 재정의할 수 있다. (= ResponseEntityExceptionHandler를 상속해야 하는 이유)
 - RFC 7807 형식을 지킨다. - 아마 스프링 부트 3 올라가면서 반영되었을 것이다. 예전 인터넷 자료는 다른 형식을 가진다.
 
