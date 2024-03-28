@@ -29,7 +29,7 @@ ORM은 DB를 객체로 다룰 수 있도록 중간에서 매핑해주는 프레�
 ### JPA는 Spring Data JPA와 다르다. 
 
 - JPA를 사용하기 쉽게 해주는게 Spring Data JPA, JPA는 EntityManager와 트랜잭션을 직접 관리해야 한다.
-- 또한 트랜잭션을 쉽게 관리할 수 있게 하는 `@Transactional`도 스프링에 제공한다.
+- 또한 트랜잭션을 쉽게 관리할 수 있게 하는 `@Transactional`도 스프링에서 제공한다.
 	- Java EE도 `@Transactional`(`javax.transaction.Transactional`)을 지원하는데? - Spring Tx와는 별개의 어노테이션이였음. 지원되는 것도 아니였고. 특정 버전(정확하진 않음, 4.2) 이후 부터 해당 어노테이션도 Spring에서 트랜잭션으로 지원함. 그리고 패키지를 보면 알겠지만 JPA의 기능이라고 보기는 어려움 - [참고](https://stackoverflow.com/questions/26387399/javax-transaction-transactional-vs-org-springframework-transaction-annotation-tr)
 - J2EE 컨테이나나 Spring 환경에서 JPA를 사용하면 해당 프레임워크가 제공하는 기능을 따라야 한다.
 
