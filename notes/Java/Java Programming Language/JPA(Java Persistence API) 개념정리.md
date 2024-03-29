@@ -110,6 +110,7 @@ ORM은 DB를 객체로 다룰 수 있도록 중간에서 매핑해주는 프레�
 			- 부모 엔티티가 자식을 참조하지 않게 변경할 떄, `CascadeType.REMOVE`는 자식 엔티티를 삭제하지 않는다. `orphanRemoval = true`는 자식 엔티티가 고아가 되었으므로 삭제한다.
 - JPA 복잡한 조회 문제 해결
 	- Criteria과 QueryDSL - [Java - DB 관련 기술 - JDBC, SQL Mapper, JPA](notes/Java/Java%20Platform/Java%20-%20DB%20관련%20기술%20-%20JDBC,%20SQL%20Mapper,%20JPA.md) 참고
+	- 네이티브 SQL 기능: SQL이지만, 영속성 컨텍스트 등 JPA의 기능 활용 가능
 - Lazy와 N+1 문제
 	- Proxy를 사용해서 연관관계의 다른 엔티티를 필요할 때 Lazy하게 가져올 수 있다. (필요없으면 로딩 안함)
 	- 실무에서는 Lazy Loading을 기본으로 설정한다.

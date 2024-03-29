@@ -40,8 +40,9 @@
 - [JAVA - Wrapper & Auto boxing & Auto Unboxing & 형변환](notes/Java/Java%20Programming%20Language/JAVA%20-%20Wrapper%20&%20Auto%20boxing%20&%20Auto%20Unboxing%20&%20형변환.md)
 - [JAVA - Iterable & Iterator의 정의와 C Style, for-each, Iterator의 차이](notes/Java/Java%20Programming%20Language/JAVA%20-%20Iterable%20&%20Iterator의%20정의와%20C%20Style,%20for-each,%20Iterator의%20차이.md)
 - [Java - DB 관련 기술 - JDBC, SQL Mapper, JPA](notes/Java/Java%20Platform/Java%20-%20DB%20관련%20기술%20-%20JDBC,%20SQL%20Mapper,%20JPA.md)
-- [JPA(Java Persistence API) 개념정리](notes/Java/Java%20Platform/JPA(Java%20Persistence%20API)%20개념정리.md)
+- [JPA(Java Persistence API) 개념정리](notes/Java/Java%20Programming%20Language/JPA(Java%20Persistence%20API)%20개념정리.md)
 - [Java - Annotation(어노테이션)](notes/Java/Java%20Programming%20Language/Java%20-%20Annotation(어노테이션).md)
+- [Inner Class를 Static으로 선언해야 하는 이유](notes/Java/Java%20Programming%20Language/Inner%20Class를%20Static으로%20선언해야%20하는%20이유.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
@@ -59,6 +60,7 @@
 - [스프링에서 사용하는 Reflection - DI, AOP](notes/Spring/스프링에서%20사용하는%20Reflection%20-%20DI,%20AOP.md)
 - [스프링의 트랜잭션(Transaction)](notes/Spring/스프링의%20트랜잭션(Transaction).md)
 - [Spring Data JPA - OSIV(Open Session In View)](notes/Spring/Spring%20Data%20JPA%20-%20OSIV(Open%20Session%20In%20View).md)
+- [Spring Data JPA 간단 개념](notes/Spring/Spring%20Data%20JPA%20간단%20개념.md)
 
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
@@ -70,6 +72,10 @@
 - [devops - CI-CD 개념](notes/Infra%20&%20DevOps/devops%20-%20CI-CD%20개념.md)
 - [Private한 환경변수 관리하는 법](notes/Infra%20&%20DevOps/Private한%20환경변수%20관리하는%20법.md)
 - [IaaS, PaaS, SaaS, DBaaS](notes/Infra%20&%20DevOps/IaaS,%20PaaS,%20SaaS,%20DBaaS.md)
+- [영상 요약 - 쿠버네티스는 어떻게 대세가 되었고, 도커는 왜 몰락했나? 쿠버네티스까지 30년 역사](notes/Infra%20&%20DevOps/영상%20요약%20-%20쿠버네티스는%20어떻게%20대세가%20되었고,%20도커는%20왜%20몰락했나?%20쿠버네티스까지%2030년%20역사.md)
+- [도커와 쿠버네티스 개념 알아보기](notes/Infra%20&%20DevOps/도커와%20쿠버네티스%20개념%20알아보기.md)
+- [쿠버네티스 기초 개념](notes/Infra%20&%20DevOps/쿠버네티스%20기초%20개념.md)
+- [쿠버네티스 - Service와 Ingress](notes/Infra%20&%20DevOps/쿠버네티스%20-%20Service와%20Ingress.md)
 
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
