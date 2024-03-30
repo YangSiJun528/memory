@@ -41,6 +41,7 @@
 
 MSA로 개발되어 서비스간의 라우팅이 필요한 경우 Ingress를 사용한다.
 
+클라우스 서비스 제공자를 사용하는 경우, 그 제공자의 L7 서비스를 사용하여 Ingress를 구현할수도 있다.
 
 # References
 - [쿠버네티스에서 반드시 알아야 할 서비스(Service) 유형](https://seongjin.me/kubernetes-service-types/)
