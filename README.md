@@ -45,6 +45,7 @@
 - [Inner Class를 Static으로 선언해야 하는 이유](notes/Java/Java%20Programming%20Language/Inner%20Class를%20Static으로%20선언해야%20하는%20이유.md)
 - [Java - ThreadLocal](notes/Java/Java%20Programming%20Language/Java%20-%20ThreadLocal.md)
 - [Java - java.lang.ref, WeakReference, SoftReference, PhantomReference](notes/Java/Java%20Programming%20Language/Java%20-%20java.lang.ref,%20WeakReference,%20SoftReference,%20PhantomReference.md)
+- [Java - Stack Trace 읽는 법](notes/Java/Java%20Programming%20Language/Java%20-%20Stack%20Trace%20읽는%20법.md)
 
 ## Algorithm
 - [알고리즘 문제 리스트](notes/Algorithm/알고리즘%20문제%20리스트.md)
