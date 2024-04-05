@@ -54,6 +54,13 @@
 
 ## Computer Science
 - [바이트코드와 가상머신 - 보완 필요](notes/Computer%20Science/바이트코드와%20가상머신%20-%20보완%20필요.md)
+- [Blocking-NonBlocking-Synchronous-Asynchronous](notes/Computer%20Science/Blocking-NonBlocking-Synchronous-Asynchronous.md)
+- [Socket은 File이다. - VFC(Virtual File System)](notes/Computer%20Science/Socket은%20File이다.%20-%20VFC(Virtual%20File%20System).md)
+- [네트워크 기초 개념](notes/Computer%20Science/네트워크%20기초%20개념.md)
+- [TCP-UDP 기초 개념](notes/Computer%20Science/TCP-UDP%20기초%20개념.md)
+- [HTTP, HTTPS, TLS 기초 개념](notes/Computer%20Science/HTTP,%20HTTPS,%20TLS%20기초%20개념.md)
+- [단방향-양방향 암호화](notes/Computer%20Science/단방향-양방향%20암호화.md)
+- [DNS 기초 개념](notes/Computer%20Science/DNS%20기초%20개념.md)
 
 ## Spring
 - [(내 생각) 웹 애플리케이션의 효과적인 예외 처리 전략](notes/Spring/(내%20생각)%20웹%20애플리케이션의%20효과적인%20예외%20처리%20전략.md)
@@ -72,10 +79,13 @@
 - [Git 브랜치 관리 전략](notes/Github/Git%20브랜치%20관리%20전략.md)
 - [GIt과 Github 차이](notes/Github/GIt과%20Github%20차이.md)
 - [Github - Fork와 Upstream & Downstream](notes/Github/Github%20-%20Fork와%20Upstream%20&%20Downstream.md)
+- [Github Action](notes/Github/Github%20Action.md)
+- [Github Actions - Java with Gradle 분석하기 with Dependabot](notes/Github/Github%20Actions%20-%20Java%20with%20Gradle%20분석하기%20with%20Dependabot.md)
 
 ## Infra & DevOps
 - [devops - CI-CD 개념](notes/Infra%20&%20DevOps/devops%20-%20CI-CD%20개념.md)
 - [Private한 환경변수 관리하는 법](notes/Infra%20&%20DevOps/Private한%20환경변수%20관리하는%20법.md)
+- [AWS 간단 개념 정리](notes/Infra%20&%20DevOps/AWS%20간단%20개념%20정리.md)
 - [IaaS, PaaS, SaaS, DBaaS](notes/Infra%20&%20DevOps/IaaS,%20PaaS,%20SaaS,%20DBaaS.md)
 - [영상 요약 - 쿠버네티스는 어떻게 대세가 되었고, 도커는 왜 몰락했나? 쿠버네티스까지 30년 역사](notes/Infra%20&%20DevOps/영상%20요약%20-%20쿠버네티스는%20어떻게%20대세가%20되었고,%20도커는%20왜%20몰락했나?%20쿠버네티스까지%2030년%20역사.md)
 - [도커와 쿠버네티스 개념 알아보기](notes/Infra%20&%20DevOps/도커와%20쿠버네티스%20개념%20알아보기.md)
@@ -90,7 +100,6 @@
 - [URL에 언더스코어(_) 보다 대시(-)를 사용해야 하는 이유](notes/etc/URL에%20언더스코어(_)%20보다%20대시(-)를%20사용해야%20하는%20이유.md)
 - [HTTP API 에러 응답 포멧 표준 - RFC7807, RFC9457](notes/etc/HTTP%20API%20에러%20응답%20포멧%20표준%20-%20RFC7807,%20RFC9457.md)
 - [Soft Delete를 사용하지 않아야 하는 이유와 반론](notes/etc/Soft%20Delete를%20사용하지%20않아야%20하는%20이유와%20반론.md)
-- [Blocking-NonBlocking-Synchronous-Asynchronous](notes/Computer%20Science/Blocking-NonBlocking-Synchronous-Asynchronous.md)
 - [Gradle에서 JaCoCo 도입하기](notes/etc/Gradle에서%20JaCoCo%20도입하기.md)
 - [권·편·장·절·관·조·항·호·목](notes/etc/권·편·장·절·관·조·항·호·목.md)
 - [(작성 중) - 객체지향이란?](notes/etc/(작성%20중)%20-%20객체지향이란?.md)
