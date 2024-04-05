@@ -36,6 +36,12 @@ VFS는 사용자 프로그램과 커널 구현 사이의 추상화 계층이다.
 2. 호환성 계층(compatibility layer)의 역할, 파일을 디스크에 쓰는 write() 시스템 호출을 소켓에 데이터를 쓰는 작업으로 변환한다.
 3. write() 시스템 호출이 직접 소켓과 상호작용하지 않고, SockFS 파일시스템이 중재자 역할을 하여 데이터를 소켓에 맞게 변환하여 전달한다.
 
+#### 추가
+라인 기술 블로그에서 관련된 내용을 보아서 추가하였다.
+
+> Linux에는 '[Everything is a File](https://en.wikipedia.org/wiki/Everything_is_a_file)'이라는 말이 있습니다. Linux에서는 소켓도 하나의 파일(file), 더 정확히는 [파일 디스크립터(file descriptor)](https://en.wikipedia.org/wiki/File_descriptor)로 생성해 관리합니다. 그러므로 저수준(low-level) 파일 입출력 함수를 기반으로 소켓 기반 데이터 송수신이 가능합니다.
+> 
+> [비동기 서버에서 이벤트 루프를 블록하면 안 되는 이유 1부 - 멀티플렉싱 기반의 다중 접속 서버로 가기까지](https://engineering.linecorp.com/ko/blog/do-not-block-the-event-loop-part1)
 
 # References
 - 본문에 링크 다 결려있음
