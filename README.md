@@ -104,7 +104,7 @@
 - [Gradle에서 JaCoCo 도입하기](notes/etc/Gradle에서%20JaCoCo%20도입하기.md)
 - [권·편·장·절·관·조·항·호·목](notes/etc/권·편·장·절·관·조·항·호·목.md)
 - [(작성 중) - 객체지향이란?](notes/etc/(작성%20중)%20-%20객체지향이란?.md)
-- [CORS, XSS, CSRF, SQL Injection](notes/etc/CORS,%20XSS,%20CSRF,%20SQL%20Injection.md)
+- [OWASP, CORS, XSS, CSRF, SQL Injection](notes/etc/OWASP,%20CORS,%20XSS,%20CSRF,%20SQL%20Injection.md)
 
 
 - - - 

@@ -2,9 +2,12 @@
 
 (여기 설명은 일부분이다. 더 정확하고 자세한 설명은 각 출처의 Cheat Sheet 참고)
 
+### OWASP(Open Web Application Security Project)
+오픈소스 웹 어플리케이션 보안 프로젝트, 보안과 관련된 취약점을 연구하는 비영리 커뮤니티.
+
 ### CORS(Cross Origin Resource Sharing)
 
-CSRF 같은 웹 취약점 문제를 방지하기 위해 이제 모든 (최신) 브라우저에서 Same-Origin Policy을 구현한다.
+CSRF 같은 웹 취약점 문제를 방지하기 위해 이제 모든 (최신) 브라우저에서 Same-Origin Policy을 지킨다.
 
 몇 가지 예외 조항을 두고 이 조항에 해당되는 리소스 요청은 같은 Origin이 아니여도 허용하기로 했는데, 그 중 하나가 “CORS 정책을 지킨 리소스 요청”이다.
 
@@ -17,6 +20,7 @@ CSRF 같은 웹 취약점 문제를 방지하기 위해 이제 모든 (최신) �
 	1. 우회하는거니까 별로 좋은 방식은 아닌 듯?
 
 ##### CORS 동작 방식
+==여기는 걍 알고만 있기==
 
 1. Preflight Request
 	1. 요청을 보내려는 경우, 먼저 `Preflight` 요청을 보내 안전한 요청인지 확인한다.
@@ -28,6 +32,7 @@ CSRF 같은 웹 취약점 문제를 방지하기 위해 이제 모든 (최신) �
 3. Credentialed Request
 	1. 인증이 필요한 리소스에 접근할 때 사용됨
 		1. 요청을 보내는 쪽에서 쿠키, HTTP 인증 자격 증명 등이 포함해서 보낸다.
+			1. (원래는 포함 안함)
 	2. 이 경우 규칙이 더 추가된다.
 #### References
 - [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
