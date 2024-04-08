@@ -74,6 +74,7 @@
 - [Spring Data JPA - OSIV(Open Session In View)](notes/Spring/Spring%20Data%20JPA%20-%20OSIV(Open%20Session%20In%20View).md)
 - [Spring Data JPA 간단 개념](notes/Spring/Spring%20Data%20JPA%20간단%20개념.md)
 
+
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
 - [Git 브랜치 관리 전략](notes/Github/Git%20브랜치%20관리%20전략.md)
@@ -103,6 +104,7 @@
 - [Gradle에서 JaCoCo 도입하기](notes/etc/Gradle에서%20JaCoCo%20도입하기.md)
 - [권·편·장·절·관·조·항·호·목](notes/etc/권·편·장·절·관·조·항·호·목.md)
 - [(작성 중) - 객체지향이란?](notes/etc/(작성%20중)%20-%20객체지향이란?.md)
+- [CORS, XSS, CSRF, SQL Injection](notes/etc/CORS,%20XSS,%20CSRF,%20SQL%20Injection.md)
 
 
 - - - 
@@ -125,5 +127,7 @@
 	- [4주차 - 화상 멘토링 내용 요약](flab/week4/4주차%20-%20화상%20멘토링%20내용%20요약.md)
 - 5주차 (2024.3.21.~2024.3.27)
 	- [5주차 - 진행한 작업들](flab/week5/5주차%20-%20진행한%20작업들.md)
-- 6주차 (2024.3.21.~2024.3.27)
-	- 
+- 6주차 (2024.3.28.~2024.3.3)
+	- [6주차 - 진행한 작업들](flab/week6/6주차%20-%20진행한%20작업들.md)
+- 7주차 (2024.3.4.~2024.3.10)
+	- [7주차 - 진행한 작업들](flab/week7/7주차%20-%20진행한%20작업들.md)
