@@ -93,14 +93,6 @@
 - [쿠버네티스 기초 개념](notes/Infra%20&%20DevOps/쿠버네티스%20기초%20개념.md)
 - [쿠버네티스 - Service와 Ingress](notes/Infra%20&%20DevOps/쿠버네티스%20-%20Service와%20Ingress.md)
 
-
-## Nand to Tetris 이후 개인적인 공부
-- [README](notes/n2t_next_study/README.md)
-- [어셈블리어 알아보기](notes/n2t_next_study/어셈블리어%20알아보기.md)
-
-## C 언어로 자료구조 구현하기
-- [README](notes/c_with_%20data_structure/README.md)
-
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
 - [Test Double 정리 - 단위 테스트에서 사용되는 객체들](notes/etc/Test%20Double%20정리%20-%20단위%20테스트에서%20사용되는%20객체들.md)
@@ -113,6 +105,17 @@
 - [권·편·장·절·관·조·항·호·목](notes/etc/권·편·장·절·관·조·항·호·목.md)
 - [(작성 중) - 객체지향이란?](notes/etc/(작성%20중)%20-%20객체지향이란?.md)
 - [OWASP, CORS, XSS, CSRF, SQL Injection](notes/etc/OWASP,%20CORS,%20XSS,%20CSRF,%20SQL%20Injection.md)
+
+
+## 시리즈 글
+특정 주제가 아니라 목적을 가지고 진행한 작업들에 대한 기록
+
+### Nand to Tetris 이후 개인적인 공부
+- [README](notes/n2t_next_study/README.md)
+- [어셈블리어 알아보기](notes/n2t_next_study/어셈블리어%20알아보기.md)
+
+### C 언어로 자료구조 구현하기
+- [README](notes/c_with_%20data_structure/README.md)
 
 
 - - - 
