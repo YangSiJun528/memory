@@ -98,6 +98,9 @@
 - [README](notes/n2t_next_study/README.md)
 - [어셈블리어 알아보기](notes/n2t_next_study/어셈블리어%20알아보기.md)
 
+## C 언어로 자료구조 구현하기
+- [README](notes/c_with_%20data_structure/README.md)
+
 ## etc
 > 아직 분류 기준이 정확하지 않은 노트들
 - [Test Double 정리 - 단위 테스트에서 사용되는 객체들](notes/etc/Test%20Double%20정리%20-%20단위%20테스트에서%20사용되는%20객체들.md)
