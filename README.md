@@ -110,13 +110,11 @@
 ## 시리즈 글
 특정 주제가 아니라 목적을 가지고 진행한 작업들에 대한 기록
 
-### Nand to Tetris 이후 개인적인 공부
-- [README](notes/n2t_next_study/README.md)
-- [어셈블리어 알아보기](notes/n2t_next_study/어셈블리어%20알아보기.md)
+### Nand to Tetris 스터디
+- [스터디 진행 Github Repository](https://github.com/chijoon-study/cs-study) - Wiki에 정리되어 있음
 
 ### C 언어로 자료구조 구현하기
 - [README](notes/c_with_%20data_structure/README.md)
-
 
 - - - 
 # [F-lab] celog 프로젝트 기록
