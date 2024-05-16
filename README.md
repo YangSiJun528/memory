@@ -114,7 +114,7 @@
 - [스터디 진행 Github Repository](https://github.com/chijoon-study/cs-study) - Wiki에 정리되어 있음
 
 ### C 언어로 자료구조 구현하기
-- [README](notes/c_with_%20data_structure/README.md)
+- [README](notes/series/c_with_%20data_structure/README.md)
 
 - - - 
 # [F-lab] celog 프로젝트 기록
