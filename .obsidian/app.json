@@ -2,7 +2,7 @@
   "showUnsupportedFiles": true,
   "useMarkdownLinks": true,
   "newFileLocation": "current",
-  "newLinkFormat": "absolute",
+  "newLinkFormat": "relative",
   "attachmentFolderPath": "./",
   "focusNewTab": true,
   "propertiesInDocument": "visible",
