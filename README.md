@@ -112,6 +112,7 @@
 
 ### Nand to Tetris 스터디
 - [스터디 진행 Github Repository](https://github.com/chijoon-study/cs-study) - Wiki에 정리되어 있음
+- [실제 어셈블리어 흝어보기](notes/series/nand2tetris/실제%20어셈블리어%20흝어보기.md)
 
 ### C 언어로 자료구조 구현하기
 - [README](notes/series/c_with_%20data_structure/README.md)
