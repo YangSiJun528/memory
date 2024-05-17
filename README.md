@@ -116,6 +116,8 @@
 
 ### C 언어로 자료구조 구현하기
 - [README](notes/series/c_with_%20data_structure/README.md)
+- ##### C언어 배우기
+- ##### 자료구조 구현하기
 
 - - - 
 # [F-lab] celog 프로젝트 기록
