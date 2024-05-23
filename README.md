@@ -85,6 +85,7 @@
 
 ## Infra & DevOps
 - [devops - CI-CD 개념](notes/Infra%20&%20DevOps/devops%20-%20CI-CD%20개념.md)
+- [Docker 데이터 관리 - Volume, Bind Mount, tmpfs Mount](notes/Infra%20&%20DevOps/Docker%20데이터%20관리%20-%20Volume,%20Bind%20Mount,%20tmpfs%20Mount.md)
 - [Private한 환경변수 관리하는 법](notes/Infra%20&%20DevOps/Private한%20환경변수%20관리하는%20법.md)
 - [AWS 간단 개념 정리](notes/Infra%20&%20DevOps/AWS%20간단%20개념%20정리.md)
 - [IaaS, PaaS, SaaS, DBaaS](notes/Infra%20&%20DevOps/IaaS,%20PaaS,%20SaaS,%20DBaaS.md)
