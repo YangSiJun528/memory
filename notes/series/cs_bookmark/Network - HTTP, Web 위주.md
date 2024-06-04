@@ -13,6 +13,10 @@
 - https://blog.bytebytego.com/p/what-happens-when-you-type-a-url
 - https://www.youtube.com/watch?v=AlkDbnbv7dk
 
+## DNS 패킷 읽어보기 - 실습
+
+- https://www.geeksforgeeks.org/dns-in-wireshark/
+
 ## DNS
 도메인 이름 체계(DNS. Domain Name System)
 
