@@ -129,6 +129,11 @@ HTTPS는 HTTP에 TLS 프로토콜이 추가된 것.
 	- 대칭 키인 Session 키를 생성해서 통신하는 이유
 		- 비대칭 키 기반의 암호화/복호화는 더 많은 연산이 사용되기 때문
 
+- HTTPS는 HTTP보다 더 빠르다.
+	- HTTP/2는 SSL/TLS에서만 지원한다. 
+	- 즉, HTTP 1.1과 HTTP 2.0의 속도 차이 때문에 이런 결과가 나옴.
+	- [참고](https://tech.ssut.me/https-is-faster-than-http/)
+
 ![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0e18db0d-f511-4f85-bb58-388fce70d42e_2631x2103.png)
 
 - https://www.youtube.com/watch?v=H6lpFRpyl14
@@ -140,9 +145,167 @@ HTTPS는 HTTP에 TLS 프로토콜이 추가된 것.
 
 ## HTTP란? 배경과 장단점
 
+(이건 일단 생각나는대로 적었는데, 배경 및 장단점보다 그냥 음... HTTP 소개만 하는게 나을듯. 아래 설명은 지우고 다시 쓰기)
 
-## HTTP Handshake, 연결 과정
+HTTP(HyperText Transfer Protocol)는 대학에서 만들어진 프로토콜으로 여러 컴퓨터에 나눠진 논문 등의 데이터인 하이퍼텍스트 문서(HTML)를 받기 위해서 만들어졌다. 그래서 초기에는 GET만 지원함.
+HTTP는 이후 1990년대 World Wide Web 핵심 기술이 됨.
 
+- 특징 겸 장점
+	- 유연성 - 다양한 형식 지원
+	- 확장성 - 커스텀 해더나 반환 코드 등 확장 가능
+	- 무상태성(stateless)
+	- 비연결성(connectionless) - 근데 연결상태 유지도 가능하긴 함.
+	- 캐시 기능 제공
+
+- 단점
+	- 비연결성 문제: 연결 형인 TCP와 잘 맞지 않음. HTTP1.0때는 요청마다 TCP 연결을 매번 맺어야 했음.
+	- 오버헤드 문제: 데이터 해데와 같은 큰 정보를 매번 주고 받음. 
+	- 보안 - HTTPS로 해결
+
+
+## TCP Handshake, 연결 과정
+
+- 용어
+	- SYNchronize(동기화)
+	- ACKnowledgement(승인) - ISN에 1을 더한 값을 포함
+	- ISN - Initial Sequence Number (초기 시퀀스 번호)
+	- FIN: 더 이상 보낼 데이터가 없음
+	- 기타: RST, PSH, URG
+
+#### 3 Way Handshake - TCP 연결
+
+1. Client: SYN - 클라이언트는 서버에게 동기화 요청을 보냄
+2. Server: ACK + SYN - 서버는 동기화 요청의 응답과 본인의 동기화 요청을 보냄
+3. Client: ACK - 클라이언트는 서버의 동기화 요청의 응답을 보냄
+
+- TCP의 신뢰성을 위한 3 Way Handshake 특징
+	- ISN을 사용해서 특정 요청이 어떤 SYN에 대한 ACK인지 확인 - 서로 (유효한) 요청을 한 번씩만 주고받음을 보장
+	- 연결 도중 TIME OUT 시간동안 응답이 안오면 패킷 버리고 재시도, 해도 안되면 연결 끊음(포기)
+
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F781159a5-f60e-4c94-b815-c8abd8d73b12_1600x1442.png)
+
+#### 4 Way Handshake - TCP 해제
+
+1. Client: FIN - 클라이언트가 더 이상 보낼 데이터가 없다는 의미의 FIN을 서버로 보냄.
+2. Server: ACK - 서버는 FIN에 대한 응답(ACK)를 보냄. Half-Close 기법을 사용해서, 클라이언트는 이 이후부터 요청을 보내지 않고, 받기만 한다.
+3. Server: FIN - 서버는 나머지 데이터를 (있다면) 전부 보내고 FIN을 클라이언트로 보냄
+4. Client: ACK - 클라이언트는 FIN에 대한 응합(ACK)를 보냄.
+	- 클라이언트는 서버로부터 받지 못한 데이터가 있을 수 있으므로 일정 기간 대기하고, 연결을 종료한다.
+	- 서버는 연결을 바로 종료한다.
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1e386fb3-7fc6-477a-aa50-c314a462a349_1600x1591.png)
+
+
+- https://blog.bytebytego.com/p/everything-you-always-wanted-to-know
+- https://www.geeksforgeeks.org/why-tcp-connect-termination-need-4-way-handshake/
+- https://developer.mozilla.org/ko/docs/Glossary/TCP_handshake
+- https://learn.microsoft.com/ko-kr/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip
+- https://evan-moon.github.io/2019/10/08/what-is-http3/?fbclid=IwAR1V1-yWjkzWEAqm_1OZfe_gtG05EuVo7WXXyVdEz_J0UHZBpGruU8PU0FY#3-way-handshake
+- https://hojunking.tistory.com/107#Half-Close%20%EA%B8%B0%EB%B2%95-1
+
+## HTTP 버전 특징
+
+HOLB: Head Of Line Blocking
+
+- #### 1.0
+	- 동일한 서버의 요청에도 매번 TCP 연결이 필요함.
+- #### 1.1
+	- [keep-alive 헤더](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Keep-Alive) 도입 - 지속 연결(Persistent Connection) 지원 - TCP 연결을 재사용
+	- pipelining(파이프라이닝 도입) - 응답을 기다리지 않고 여러 요청 가능
+		- 단, HOLB 문제. HTTP 요청 순서에 맞춰서 응답해야만 함. 특정 요청이 오래 걸리는 경우(패킷 손실, 무거운 요청), 그 이후 요청은 빨리 끝나도 계속 대기해야 함. 
+		- 구현하기 어려웠고, 많은 브라우저/리버스 프록시에서 지원하지 않게 됨
+	- 브라우저는 성능을 위해 여러 커넥션을 맺은 상태를 유지해야 했음. 
+- #### 2.0
+	- "스트림" 도입 - 하나의 TCP 연결에서도 요청 순서 상관 없이, 데이터 주고받을 수 있음.
+		- HTTP 단의 HOLB 문제를 해결했으나, TCP 단의 HOLB 문제는 남아있음. (TCP는 패킷 순서를 지켜야 함)
+	- push 기능 도입 - 서버가 필요할 때 클라이언트에게 데이터 전송 (요청 없이)
+		- polling이 없어도 되므로 효율적임.
+		- (주의) SSE (Server Sent Events)와는 별개의 개념. << 검증하기
+- #### 3.0
+	- TCP 대신 Google에서 사용하던 QUIC 프로토콜을 사용함. QUIC는 UDP 기반임.
+		- TCP의 HOLB와 레거시(TCP + TLS Handshake, IP 바뀌면 재연결해야 함, 확장/커스텀 공간 부족) 문제 때문에 UDP를 사용함. [참고](https://evan-moon.github.io/2019/10/08/what-is-http3/?fbclid=IwAR1V1-yWjkzWEAqm_1OZfe_gtG05EuVo7WXXyVdEz_J0UHZBpGruU8PU0FY#3-way-handshake)
+	- IP+Port(TCP)대신, Connection ID라는 식별자를 사용해서 네트워크가 바뀌어도 계속 연결 가능 (모바일에 유리)
+	- QUIC 스트림은 QUIC 연결을 공유하고, 각 스트림은 독립적이라 HOLB 문제가 발생하지 않음.
+	- QUIC는 TCP + TLS 과정을 3 RTT(대충 왕복 통신이라는 의미)를 1 RTT로 줄여준다. (효율적임)
+
+<details>
+  <summary>GPT 피셜 정리</summary>
+  <div markdown="1">
+    <p>
+      HTTP(하이퍼텍스트 전송 프로토콜)은 웹 상에서 데이터를 전송하는 프로토콜로, 다양한 버전이 존재합니다. 각 버전은 성능 향상, 보안 강화 및 새로운 기능 추가를 통해 발전해왔습니다. 다음은 주요 HTTP 버전들의 특징입니다.
+    </p>
+    
+    <h3>HTTP/0.9</h3>
+    <ul>
+      <li><strong>출시 시기:</strong> 1991년</li>
+      <li><strong>특징:</strong> 
+        <ul>
+          <li>매우 간단한 프로토콜로, 오직 GET 메서드만 지원</li>
+          <li>HTTP 헤더가 없으며, 단순히 HTML 페이지를 전송하는 기능만 제공</li>
+          <li>요청 라인 예시: <code>GET /index.html</code></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <h3>HTTP/1.0</h3>
+    <ul>
+      <li><strong>출시 시기:</strong> 1996년</li>
+      <li><strong>특징:</strong> 
+        <ul>
+          <li>GET, POST, HEAD 메서드 지원</li>
+          <li>HTTP 헤더 도입으로 메타데이터 전송 가능</li>
+          <li>상태 코드 및 콘텐츠 타입 지정 가능</li>
+          <li>비지속적인 연결: 요청마다 새로운 TCP 연결을 생성하고 응답 후 연결을 종료</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <h3>HTTP/1.1</h3>
+    <ul>
+      <li><strong>출시 시기:</strong> 1997년</li>
+      <li><strong>특징:</strong> 
+        <ul>
+          <li>지속 연결(Persistent Connection) 지원: 연결을 재사용하여 성능 향상</li>
+          <li>파이프라이닝(Pipelining) 지원: 하나의 연결에서 여러 요청을 순차적으로 보내 대기 시간 감소</li>
+          <li>호스트 헤더 필드 도입: 가상 호스팅 지원으로 한 IP 주소에 여러 도메인 호스팅 가능</li>
+          <li>캐싱, 콘텐츠 인코딩, 청크 전송 인코딩 등 다양한 기능 추가</li>
+          <li>더욱 세밀한 상태 코드 및 HTTP 메서드 추가</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <h3>HTTP/2</h3>
+    <ul>
+      <li><strong>출시 시기:</strong> 2015년</li>
+      <li><strong>특징:</strong> 
+        <ul>
+          <li>바이너리 프레이밍 계층 도입: 텍스트 기반이 아닌 바이너리 형식으로 데이터 전송</li>
+          <li>멀티플렉싱 지원: 하나의 연결에서 여러 스트림을 동시에 처리하여 병목 현상 해결</li>
+          <li>헤더 압축: 헤더 크기 감소로 성능 향상 (HPACK 압축 사용)</li>
+          <li>서버 푸시: 클라이언트 요청 없이도 서버가 리소스를 푸시 가능</li>
+          <li>기존 HTTP/1.1과 호환성 유지</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <h3>HTTP/3</h3>
+    <ul>
+      <li><strong>출시 시기:</strong> 2020년 (초안)</li>
+      <li><strong>특징:</strong> 
+        <ul>
+          <li>QUIC 프로토콜 기반: TCP 대신 UDP를 사용하여 연결 수립 및 데이터 전송</li>
+          <li>빠른 연결 수립: TCP 핸드셰이크가 필요 없어 지연 시간 감소</li>
+          <li>내장된 보안: TLS 1.3을 기본적으로 사용하여 보안 강화</li>
+          <li>향상된 멀티플렉싱: HTTP/2의 단점 보완, 패킷 손실에도 성능 저하 없음</li>
+          <li>더 나은 성능 및 안정성 제공</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</details>
+
+- https://www.youtube.com/watch?v=a-sBfyiXysI
+- https://dev.to/accreditly/http1-vs-http2-vs-http3-2k1c
+- https://blog.bytebytego.com/p/http-10-http-11-http-20-http-30-quic
 
 ## [북마크만] Web 역사, 배경 
 
@@ -154,4 +317,6 @@ HTTPS는 HTTP에 TLS 프로토콜이 추가된 것.
 	- JS의 표준화와 FE 프레임워크, TS, 웹 어셈블러
 - https://www.youtube.com/watch?v=KpMDqrBEySs, https://www.books.weniv.co.kr/basecamp-network/chapter11/11-3
 	- 웹의 역사
-
+- https://www.youtube.com/watch?v=Cngpm5NCb-Q
+	- 웹 개발 업무
+		- php -> java, C# 순으로 소개하는데, 이거는 웹 생태계? 기준으로 본격적으로 참여한 시점 정도로 보면 될거 같고. 실제 시기는 java가 php보다 먼저임
