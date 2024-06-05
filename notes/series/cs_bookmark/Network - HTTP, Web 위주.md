@@ -147,24 +147,8 @@ HTTPS는 HTTP에 TLS 프로토콜이 추가된 것.
 - https://blog.bytebytego.com/i/53596514/how-does-https-work
 
 
-## HTTP란? 배경과 장단점
+## HTTP란? 특징
 
-(이건 일단 생각나는대로 적었는데, 배경 및 장단점보다 그냥 음... HTTP 소개만 하는게 나을듯. 아래 설명은 지우고 다시 쓰기)
-
-HTTP(HyperText Transfer Protocol)는 대학에서 만들어진 프로토콜으로 여러 컴퓨터에 나눠진 논문 등의 데이터인 하이퍼텍스트 문서(HTML)를 받기 위해서 만들어졌다. 그래서 초기에는 GET만 지원함.
-HTTP는 이후 1990년대 World Wide Web 핵심 기술이 됨.
-
-- 특징 겸 장점
-	- 유연성 - 다양한 형식 지원
-	- 확장성 - 커스텀 해더나 반환 코드 등 확장 가능
-	- 무상태성(stateless)
-	- 비연결성(connectionless) - 근데 연결상태 유지도 가능하긴 함.
-	- 캐시 기능 제공
-
-- 단점
-	- 비연결성 문제: 연결 형인 TCP와 잘 맞지 않음. HTTP1.0때는 요청마다 TCP 연결을 매번 맺어야 했음.
-	- 오버헤드 문제: 데이터 해데와 같은 큰 정보를 매번 주고 받음. 
-	- 보안 - HTTPS로 해결
 
 
 ## TCP Handshake, 연결 과정
@@ -206,9 +190,11 @@ HTTP는 이후 1990년대 World Wide Web 핵심 기술이 됨.
 - https://evan-moon.github.io/2019/10/08/what-is-http3/?fbclid=IwAR1V1-yWjkzWEAqm_1OZfe_gtG05EuVo7WXXyVdEz_J0UHZBpGruU8PU0FY#3-way-handshake
 - https://hojunking.tistory.com/107#Half-Close%20%EA%B8%B0%EB%B2%95-1
 
-## HTTP 버전 특징
+## HTTP 버전 특징 - 1.0 ~ 3.0
 
 HOLB: Head Of Line Blocking
+
+(여기 설명 외에도 많은 기능 있음)
 
 - #### 1.0
 	- 동일한 서버의 요청에도 매번 TCP 연결이 필요함.
@@ -221,9 +207,10 @@ HOLB: Head Of Line Blocking
 - #### 2.0
 	- "스트림" 도입 - 하나의 TCP 연결에서도 요청 순서 상관 없이, 데이터 주고받을 수 있음.
 		- HTTP 단의 HOLB 문제를 해결했으나, TCP 단의 HOLB 문제는 남아있음. (TCP는 패킷 순서를 지켜야 함)
-	- push 기능 도입 - 서버가 필요할 때 클라이언트에게 데이터 전송 (요청 없이)
+	- HTTP/2 Push 기능 도입 - 서버가 클라이언트가 요청 시 명시적으로 요청하지 않은 여러 데이터를 추가로 응답 가능. (요청 필요)
 		- polling이 없어도 되므로 효율적임.
-		- (주의) SSE (Server Sent Events)와는 별개의 개념. << 검증하기
+		- (주의) SSE (Server Sent Events, HTML5 표준)와는 별개의 개념.
+			- SSE는 서버에서 클라이언트로 단방향 이벤트 스트림 제공, 클라이언트 요청 없이 데이터 전송 가능 
 - #### 3.0
 	- TCP 대신 Google에서 사용하던 QUIC 프로토콜을 사용함. QUIC는 UDP 기반임.
 		- TCP의 HOLB와 레거시(TCP + TLS Handshake, IP 바뀌면 재연결해야 함, 확장/커스텀 공간 부족) 문제 때문에 UDP를 사용함. [참고](https://evan-moon.github.io/2019/10/08/what-is-http3/?fbclid=IwAR1V1-yWjkzWEAqm_1OZfe_gtG05EuVo7WXXyVdEz_J0UHZBpGruU8PU0FY#3-way-handshake)
@@ -324,3 +311,9 @@ HOLB: Head Of Line Blocking
 - https://www.youtube.com/watch?v=Cngpm5NCb-Q
 	- 웹 개발 업무
 		- php -> java, C# 순으로 소개하는데, 이거는 웹 생태계? 기준으로 본격적으로 참여한 시점 정도로 보면 될거 같고. 실제 시기는 java가 php보다 먼저임
+- https://www.youtube.com/watch?v=1JjUYaoxJ9Y&list=PLcXyemr8ZeoSGlzhlw4gmpNGicIL4kMcX&index=4
+	- WWW의 개념과 발명 과정
+
+## 네트워크 강의
+- https://www.youtube.com/watch?v=dsoAkoxZ13o
+	- 네트워크 기초 무료 강의 | 새내기 개발자들을 위한 필수 가이드 - 4시간짜리, 뭘 배워야 하는지 알기 좋을 듯?
