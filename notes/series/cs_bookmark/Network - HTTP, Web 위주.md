@@ -147,48 +147,8 @@ HTTPS는 HTTP에 TLS 프로토콜이 추가된 것.
 - https://blog.bytebytego.com/i/53596514/how-does-https-work
 
 
-## HTTP란? 특징
+## HTTP란? 특징 <<< 작성하기
 
-
-
-## TCP Handshake, 연결 과정
-
-- 용어
-	- SYNchronize(동기화)
-	- ACKnowledgement(승인) - ISN에 1을 더한 값을 포함
-	- ISN - Initial Sequence Number (초기 시퀀스 번호)
-	- FIN: 더 이상 보낼 데이터가 없음
-	- 기타: RST, PSH, URG
-
-#### 3 Way Handshake - TCP 연결
-
-1. Client: SYN - 클라이언트는 서버에게 동기화 요청을 보냄
-2. Server: ACK + SYN - 서버는 동기화 요청의 응답과 본인의 동기화 요청을 보냄
-3. Client: ACK - 클라이언트는 서버의 동기화 요청의 응답을 보냄
-
-- TCP의 신뢰성을 위한 3 Way Handshake 특징
-	- ISN을 사용해서 특정 요청이 어떤 SYN에 대한 ACK인지 확인 - 서로 (유효한) 요청을 한 번씩만 주고받음을 보장
-	- 연결 도중 TIME OUT 시간동안 응답이 안오면 패킷 버리고 재시도, 해도 안되면 연결 끊음(포기)
-
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F781159a5-f60e-4c94-b815-c8abd8d73b12_1600x1442.png)
-
-#### 4 Way Handshake - TCP 해제
-
-1. Client: FIN - 클라이언트가 더 이상 보낼 데이터가 없다는 의미의 FIN을 서버로 보냄.
-2. Server: ACK - 서버는 FIN에 대한 응답(ACK)를 보냄. Half-Close 기법을 사용해서, 클라이언트는 이 이후부터 요청을 보내지 않고, 받기만 한다.
-3. Server: FIN - 서버는 나머지 데이터를 (있다면) 전부 보내고 FIN을 클라이언트로 보냄
-4. Client: ACK - 클라이언트는 FIN에 대한 응합(ACK)를 보냄.
-	- 클라이언트는 서버로부터 받지 못한 데이터가 있을 수 있으므로 일정 기간 대기하고, 연결을 종료한다.
-	- 서버는 연결을 바로 종료한다.
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1e386fb3-7fc6-477a-aa50-c314a462a349_1600x1591.png)
-
-
-- https://blog.bytebytego.com/p/everything-you-always-wanted-to-know
-- https://www.geeksforgeeks.org/why-tcp-connect-termination-need-4-way-handshake/
-- https://developer.mozilla.org/ko/docs/Glossary/TCP_handshake
-- https://learn.microsoft.com/ko-kr/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip
-- https://evan-moon.github.io/2019/10/08/what-is-http3/?fbclid=IwAR1V1-yWjkzWEAqm_1OZfe_gtG05EuVo7WXXyVdEz_J0UHZBpGruU8PU0FY#3-way-handshake
-- https://hojunking.tistory.com/107#Half-Close%20%EA%B8%B0%EB%B2%95-1
 
 ## HTTP 버전 특징 - 1.0 ~ 3.0
 
@@ -314,6 +274,76 @@ HOLB: Head Of Line Blocking
 - https://www.youtube.com/watch?v=1JjUYaoxJ9Y&list=PLcXyemr8ZeoSGlzhlw4gmpNGicIL4kMcX&index=4
 	- WWW의 개념과 발명 과정
 
-## 네트워크 강의
-- https://www.youtube.com/watch?v=dsoAkoxZ13o
-	- 네트워크 기초 무료 강의 | 새내기 개발자들을 위한 필수 가이드 - 4시간짜리, 뭘 배워야 하는지 알기 좋을 듯?
+## OAuth, OpenID Connect(OIDC)
+
+- OAuth2
+	- 인가 목적
+	- 액세스 토큰(랜덤 문자열도 가능)이나 스코프(가능한 범위)에 대한 표준이 없음.
+		- 각 제공자마다 알아서 사용함.
+			- OIDC를 제공하지는 않지만, 액세스 토큰에 JWT로 식별 정보를 가지고 있는 경우도 있음.
+	- 사용자의 정보(인증,식별 정보)를 확인하기 위해서 액세스 토큰을 사용해서 요청해야 함.
+- OIDC(OpenID Connect)
+	- OAuth2의 상위 집합. 인가에 초점이 맞춰진 OAuth2에 인증 기능을 추가하는 프로토콜 정도로 보면 될 듯.
+	- ID 토큰(액세스 토큰이랑 별개거나 하나인 듯?)이라고, 정해진 형식(몇 개는 필수인) JWT를 사용함
+		- 사용자 이름이나 식별정보 등의 정보를 가지고 있어서, 사용자 식별 정보를 요청하지 않아도 됨.
+	- 제공자에 따라 OAuth2는 지원하지만, OIDC 지원하지 않기도 함.
+		- 구글이나 슬랙은 OIDC를 지원한다.
+		- Github은 OIDC를 지원하지 않는다.
+
+- https://www.youtube.com/watch?v=DQFv0AxTEgM&t=1774s
+	- OAuth 관련 역사, 현재, 미래
+- https://www.youtube.com/watch?v=iOUicQDEAyI&t=155s
+	- OAuth , JWT
+- https://devocean.sk.com/blog/techBoardDetail.do?ID=165453&boardType=techBlog
+	- OAuth, OIDC - 출처 부분 참고할만하게 있음
+- https://hudi.blog/open-id/
+	- 설명 잘 해줌
+- https://gist.github.com/nicolasdao/5f428529426d2183e2f1358fb46ba642
+	- 정리 잘 됨
+
+## JWT
+JSON Web Token의 약자. 한글로는 JWT 그대로 부르지만, ByteByteGo 등 외국 영상을 보면 "jot"(좌ㅌ)?라고 발음한다.
+
+- 토큰 기반의 인증 방식으로, 표준화 된 방식 중 하나.
+- 서버가 인증 정보를 저장하지 않고, 클라이언트가 저장하는 JWT에 인증(식별, 사용자 정보)가 포함된다.
+
+- 왜 쓰는가?
+	- 등장 배경: JWT는 분산된 환경에서 인증 서버의 부하를 줄이기 위함
+		- 인터넷이 확장됨에 따라 많은 트래픽을 처리해야 함.
+		- 인증은 각 서비스에서 처리해야 하는데, 관리하기 어려움.
+		- 그래서 하나의 인증 서버를 두고 처리
+		- 인증 서버에 병목이 발생함. - 매 요청마다 계속 읽어야 함. MSA면 특히 더 심하고
+		- 클라이언트가 인증 정보를 가져서 인증/인가 서버의 부하를 줄이도록 JWT를 사용.
+	- 사용 목적
+		- 상태 비저장 인증: 서버에 상태를 저장하고 싶지 않거나, 그래도 되는 서비스인 경우.
+		- 서버 간의 통신: API 간의 신뢰할 수 있는 데이터 교환 - OAuth나 OIDC가 대표적.
+		- 인증 서버의 부하가 많이 발생하는 대규모 서비스에서 트래픽 개선
+		- 모바일과 같이 여러 환경을 제공해야 하는 경우: 브라우저가 아니라면 쿠키를 사용할 수 없음. 
+			- (그래도 토큰 키를 사용해서 세션처럼 사용할 수 있는거 아닌가?)
+
+- JWT 설명
+	- 비대칭키로 만들어진다.
+		- 비밀 키는 서명 역할, 공개 키는 검증 및 복호화를 통한 사용자 식별 정보 접근.
+	- 헤더(알고리즘), 페이로드(필요한 정보, 커스텀 추가 가능), 시그니처(서명 정보, 검증에 사용됨)
+	- 한계점이 명확하다. 서버가 아니라 클라이언트가 인증 정보를 저장하는 것이 근본적인 원인
+		- 서버가 아니라 클라이언트가 인증 정보를 저장하므로 세세한 처리가 어렵다.
+			- 로그아웃과 같은 토큰 무효화 처리
+		- JWT는 상대적으로 큰 크기를 가진다. 네트워크 대역폭에 영향 가능성
+		- 보안 문제, 외부에서 쉽게 복호화 가능하다.
+			- Base64URL로 디코딩하면 내용을 읽을 수 있다.
+			- 따라서 민감한 개인정보를 저장하면 안된다.
+			- 이런 문제를 해결하기 위해서 2중으로 처리하기도 하는 듯?
+		- 빈번한 상태 변경에 취약하다.
+			- JWT를 매번 새로 작성해주어야 함.
+
+- https://www.youtube.com/watch?v=iOUicQDEAyI&t=155s
+	- OAuth , JWT
+- https://www.youtube.com/watch?v=P2CPd9ynFLg
+	- ByteByteGo
+- https://ko.wikipedia.org/wiki/JSON_%EC%9B%B9_%ED%86%A0%ED%81%B0#cite_note-rfc7519-1
+- https://jwt.io/
+- https://blog.bytebytego.com/p/ep34-session-cookie-jwt-token-sso
+- https://www.youtube.com/watch?v=7abbNwuCXbg
+- https://www.youtube.com/watch?v=THFmV5LPE6Y - JWT 한계점
+
+
