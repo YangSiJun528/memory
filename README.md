@@ -128,6 +128,7 @@
 - [Readme](notes/series/cs_bookmark/Readme.md)
 - [Network - HTTP, Web 위주](notes/series/cs_bookmark/Network%20-%20HTTP,%20Web%20위주.md)
 - [Network - IP, TCP, UDP, 4 layer 이하](notes/series/cs_bookmark/Network%20-%20IP,%20TCP,%20UDP,%204%20layer%20이하.md)
+- [DataBase - RDB, NoSQL, index 등](notes/series/cs_bookmark/DataBase%20-%20RDB,%20NoSQL,%20index%20등.md)
 - [Frontend 관련 지식 - 나중에 FE 배울 때 다시 읽기](notes/series/cs_bookmark/Frontend%20관련%20지식%20-%20나중에%20FE%20배울%20때%20다시%20읽기.md)
 
 - - - 
