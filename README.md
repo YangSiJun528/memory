@@ -124,9 +124,11 @@
 - [1. C 기초 정리](notes/series/c_with_%20data_structure/1.%20C%20기초%20정리.md)
 - [2. C로 자료구조 구현하기](notes/series/c_with_%20data_structure/2.%20C로%20자료구조%20구현하기.md)
 
-### CS 관련 자료 북마크
+### 여러 자료 북마크
 - [Readme](notes/series/cs_bookmark/Readme.md)
 - [Network - HTTP, Web 위주](notes/series/cs_bookmark/Network%20-%20HTTP,%20Web%20위주.md)
+- [Network - IP, TCP, UDP, 4 layer 이하](notes/series/cs_bookmark/Network%20-%20IP,%20TCP,%20UDP,%204%20layer%20이하.md)
+- [Frontend 관련 지식 - 나중에 FE 배울 때 다시 읽기](notes/series/cs_bookmark/Frontend%20관련%20지식%20-%20나중에%20FE%20배울%20때%20다시%20읽기.md)
 
 - - - 
 # [F-lab] celog 프로젝트 기록
