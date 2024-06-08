@@ -346,4 +346,70 @@ JSON Web Token의 약자. 한글로는 JWT 그대로 부르지만, ByteByteGo �
 - https://www.youtube.com/watch?v=7abbNwuCXbg
 - https://www.youtube.com/watch?v=THFmV5LPE6Y - JWT 한계점
 
+## Web 관련 네트워크 프로토콜
 
+초기 단순 파일을 가져오는 웹 기술이 발전함에 따라서, 거의 모든 프로토콜을 웹 기반으로 구현할 수 있도록 발전하였다 (문제 해결). 이러한 프로토콜(아닌 것도 있음)을 설명함.
+
+- #### WebSocket
+	- 서버/클라이언트 **양뱡향** 통신을 위한 프로토콜
+		- HTML5의 표준으로, 공식적으로는 HTTP 1.1을 사용해야 함.
+			- HTTP/1.1 부터 TCP 연결 지속이 가능하고, 어차피 WebSocket 프로토콜 업그레이드만 수행하기 때문임.
+		- HTTP의 문제를 해결하기 위해서 등장한 프로토콜
+			- Polling 등으로 채팅 기능을 구현했어야 함.
+		- HTTP와는 별개의 프로토콜, HTTP 2에서는 양뱡향 통신이 가능하지만, 웹소켓처럼 장시간 양방향 통신을 위해서 만들어지지 않았음.
+	- HTTP 연결 이후, HTTP 형식으로 Handshake를 통해서 WS 프로토콜이 연결됨.
+	- WS에서 TLS를 추가하면 WSS
+	- 주의점
+		- 로드밸런싱 시 지속적인 서버로 연결
+			- NginX 같은 곳에서 따로 구현해야 함.
+			- 이러면 한 곳에 부하가 몰리는 문제가 생길수도 있음
+			- 아니면 STOMP 같이 Message Broker 등으로 해결 가능
+		- TCP 연결이 유지되므로 부하가 큰 변
+	- API를 지원하는 브라우저나, 구현하는 라이브러리 등을 사용한다.
+- #### WebRTC
+	- 실시간 P2P(서버 없이 사용자 간 통신) 프로토콜. **브라우저 위에서 동작**하며, 파일, 음성, 데이터 등을 주고받을 수 있음.
+		- 브라우저 내부에 API 구현체(Media Engine을 포함함)이 포함되면서 음성/영상 통신이 가능해짐.
+	- 연결 상태를 관리하기 위한 WebSocket 서버와 각 브라우저(호스트)의 연결을 가능하게 하는 STUN/TURN 서버가 필요하다.
+		- 이 부분은 나중에 필요하면 따로 정리하기, 그냥 나중에 찾기 쉽게 키워드만 정리한 정도임.
+	- 기본적으로 암호화된 통신 제공
+- #### gRPC
+	- 구글의 RPC(remote procedure call) 프레임워크
+		- RPC는 특정 기능을 로컬의 호출(함수) 처럼 사용할 수 있음
+	- HTTP 2를 기반으로 동작함. (HTTP 2는 TLS가 필수이므로 기본적으로 암호화 됨)
+		- HTTP 단의 HOLB 문제가 없고, 서버와 클라이언트끼리 데이터를 자유롭게 주고 받을 수 있음
+	- 데이터 형식을 Protocol Buffer라는 것에 정의하고 호스트끼리 공유함.
+		- 고유한 형식이므로 언어에 의존하지 않음.
+		- json처럼 key 정보를 가지지 않아도 되고, 바이너리 코드로 직렬화하여 효율적으로 보낼 수 있음.
+	- MSA 등에서 주로 사용함. 브라우저에서는 아직 지원이 부족한 편.
+- #### GraphQL
+	- 엔드포인터가 하나. 클라이언트(FE) 측에서 Query Language를 작성해서 필요한 데이터만 가져올 수 있음.
+		- OverFetching, UnderFetching 문제를 해결함.
+	- Subscription(sub/pub) 모델을 기반으로 WebSocket을 통해 실시간 양방향 통신 기능을 제공한다.
+		- 특정 이벤트를 구독하고, 발생하면 응답해주는 식
+	- 단점: 캐싱 어려움, 성능 낮음, 러닝 커브
+	- 유용한 경우
+		- 복잡한 데이터 모델 / 클라이언트가 많은 제어권을 가진 서비스(변경이 많거나, 페이지 크기에 따라 보여지는 데이터가 다른 경우) / 실시간 반응이 필요한 서비스
+- #### SOAP
+	- 아직도 이거 쓰는곳이 있나? 대충 엔드포인터가 하나고, XML 기반으로 본문에 데이터 요청하는 형식 담아서 보내는거.
+		- 금융권처럼 보안과 긴 트랜잭션이 필요한 경우 사용하기도 한다고는 함.
+- #### REST API
+	- 이건 걍 빼긴 그래서 넣었는데, 자료 많으니까 알아서 찾기
+		- 대충 메서드로 행동, URI로 자원의 식별을 정의해서 사용하는 API. OpenAPI 규격으로 통일을 위해 주로 사용하는 디자인 규칙(필수 or 프로토콜 아님) 정도로 알면 될 듯.
+		- 대다수의 의미와는 좀 동떨어진 진짜 의미의 REST API에 관한 글 (약간 객체지향 개념 같네)
+			- 그런 REST API로 괜찮은가
+			- [REST API는 HTML 기반이여야 한다.](https://htmx.org/essays/how-did-rest-come-to-mean-the-opposite-of-rest/)
+			- HATEOAS
+- #### SSE (Server Sent Events)
+	- 서버 -> 클라이언트의 **단방향** 통신을 위한 프로토콜
+		- 기본의 클라이언트가 요청해야만 응답을 보낼 수 있는 기존의 HTTP의  문제 해결
+		- HTML5 표준으로 지속 연결이 필요하므로 1.1 이상에서 동작
+			- HTTP 프로토콜의 일부 or 확장으로 볼 수 있음
+				- WebSocket이 별개의 프로토콜이라 별도의 처리가 필요할 수도 있는 것과 달리 HTTP만 잘 되면 거의 문제없이 수행 가능.
+	- WebSocket보다 사용하기 쉬움 (로드밸런싱, 구현 난이도 등에서)
+	- 브라우저는 WEB API(HTML) 표준인 JavaScript의 `EventSource`를 사용
+	- TCP 연결을 유지해야 하기 때문에 사용자가 많은 경우 네트워크 자원을 많이 소모할 수 있음.
+
+- https://www.youtube.com/watch?v=07Lppn7UdIs&list=PLpO7kx5DnyIGzsb-4N9Z76RIR1xfprlIl
+	- 얄코 시리즈
+- https://www.youtube.com/watch?v=hMYIGTzNcH8&list=PLg9hpcQTPCpdRwBGjWC2kRuaTMuUObPY9&index=2
+	- 코딩아재 시리즈
