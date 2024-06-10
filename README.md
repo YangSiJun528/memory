@@ -75,7 +75,6 @@
 - [Spring Data JPA - OSIV(Open Session In View)](notes/Spring/Spring%20Data%20JPA%20-%20OSIV(Open%20Session%20In%20View).md)
 - [Spring Data JPA 간단 개념](notes/Spring/Spring%20Data%20JPA%20간단%20개념.md)
 
-
 ## Github
 - [Conventional Commits, Git Hooks, Husky, JGit 란?](notes/Github/Conventional%20Commits,%20Git%20Hooks,%20Husky,%20JGit%20란?.md)
 - [Git 브랜치 관리 전략](notes/Github/Git%20브랜치%20관리%20전략.md)
@@ -108,7 +107,6 @@
 - [(작성 중) - 객체지향이란?](notes/etc/(작성%20중)%20-%20객체지향이란?.md)
 - [OWASP, CORS, XSS, CSRF, SQL Injection](notes/etc/OWASP,%20CORS,%20XSS,%20CSRF,%20SQL%20Injection.md)
 
-
 ## 시리즈 글
 특정 주제가 아니라 목적을 가지고 진행한 작업들에 대한 기록
 
@@ -123,6 +121,7 @@
 - [0-1. CLion에서 Assert 적용하기, 테스트 코드 작성법](notes/series/c_with_%20data_structure/0-1.%20CLion에서%20Assert%20적용하기,%20테스트%20코드%20작성법.md)
 - [1. C 기초 정리](notes/series/c_with_%20data_structure/1.%20C%20기초%20정리.md)
 - [2. C로 자료구조 구현하기](notes/series/c_with_%20data_structure/2.%20C로%20자료구조%20구현하기.md)
+- [3. 프로젝트를 진행하면서 얻은 인사이트 정리](notes/series/c_with_%20data_structure/3.%20프로젝트를%20진행하면서%20얻은%20인사이트%20정리.md)
 
 ### 여러 자료 북마크
 - [Readme](notes/series/cs_bookmark/Readme.md)
