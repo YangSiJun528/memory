@@ -1,12 +1,56 @@
 
 
-## 파일 시스템의 Block과 
+## 파일 시스템의 Block과 DB의 논리적 I/O 최소 단위(Page)
 
-## 순차 I/O, 랜덤 I/O
+OS의 파일 시스템에는 Block이라고 읽고 쓰는 논리적인 최소 단위가 있다. (논리적임, 주로 4kb, 8kb 등 2배수)
 
-- B+Tree 인덱스가 느린 이유
+이 크기만큼 데이터를 읽고 쓰는데, 0,1 하나 수정하는 것도 Block을 읽고 다시 써야 함.
+
+RDBMS나 NoSQL 등의 DB는 당연하게도 내부적으로는 이런 block을 사용하나. (당연히 OS단 기능이니까.)
+
+DB의 논리적인 최소 단위는 DB마다 다르다.
+
+대부분의 RDBMS에서는 Page라고 부르고,  (Oracle만 Data Block이라고 부름)
+
+경우에 따라 OS의 Block과 DB의 Page를 비교했을 때, 더 작거나, 같거나, 클 수도 있다.
+
+각각의 장단점이 있는 편.
+
+NoSQL의 경우 워낙 다양하기 때문에 공식문서를 찾아보는게 나을 것 같다. (다른 DB도 마찬가지)
+
+- f-lab 멘토님 피셜
+- SQLP 책 참고 - 대충 읽은거라 정확하지는 않음.
+
+## Sequential(순차) I/O, Random(랜덤) I/O
+
+I/O에는 물리적인 차이에 따라서 2가지 종류가 있음.
+
+DB나 자료구조를 다룰 때, 효율성 면에서 자주 이야기가 나오기 때문에 알아두면 좋음
+
+- HDD와 SDD에 따라 성능 차이가 다름
+	- HDD는 물리적인 읽기(디스크 암 회전)가 필요해서 Random I/O가 느림
+	- SDD는 전기적인 방식으로 동작해서 Random I/O와 Sequential I/O와 큰 차이가 없음. 그래도 랜덤이 더 느림.
+
+- Sequential I/O
+	- 주소가 물리적으로 순차적으로 위치한 여러개의 Block를 읽는 경우
+	- 읽기/쓰기 작업이 연속적으로 진행되므로 빠른 I/O가 가능
+- Random I/O
+	- 물리적으로 떨어져있는 주소를 한 Block 씩 읽는 경우, 가깝거나 같은 주소라도 한 Block씩 읽는 것도 포함함. (RDB의 경우 Block을 Page로 볼 수도 있음)
+	- Block이 여러 곳에 분산되어 I/O를 수행하기 때문에 느리다.
+
 
 - https://hudi.blog/storage-and-random-sequantial-io/
+- SQLP 가이드 책
+
+## B+Tree 인덱스가 느린 이유
+
+- 모든 연산이 Random I/O이기 때문에
+	- 디스크에 있는 root node를 읽고, 다른 internal node의 디스크 주소를 찾아서 Random I/O함.
+	- leaf node에 도달해도, 인덱스 외에 추가 조건이 있으면 조건에 맞는지 매번 Random I/O 해야 함.
+	- 물론 이 사이에 RDB는 메모리 버퍼 풀이 있어서 메모리에서 캐싱될 수도 있지만, 그래도 Random I/O인건 변하지 않음.
+
+- 반대로 full sacn은 Sequential I/O라서 더 효율적일 때도 있음, 특히 파티셔닝을 통해서 검색 범위가 줄었을 때
+
 - SQLP 가이드 책
 
 ## SQL,DB 튜닝이란?
@@ -23,6 +67,8 @@
 ## DB 아키텍처
 
 DB마다 달라서... 여러가지 공식문서나 자료 가져와서 비교하는 식으로??
+
+걍 이건 공식문서 확인하고 그때그떄 링크 남기면 될 듯?
 
 ## 트랜잭션과 Lock, ACID
 
@@ -43,7 +89,7 @@ DB (Database)
 	- 오름차순으로 정렬된 root, 중간 Node의 key 목록이 하위 노드들의 범위를 결정한다.
 	- 데이터 자체는 leaf노드에만 가지고 있다.
 - 정확히 따지면 B+Tree가 RDB의 인덱스, B Tree(B-Tree라고도 함)는 아님.
-	- B-Tree와 달리 leaf 노드에만 값을 가지고, 나머지(internal)은 범위만 저장함.
+	- B-Tree와 달리 B+Tree는 leaf 노드에만 값을 가지고, 나머지(internal)은 범위만 저장함.
 - 항상 모든 leaf Node의 level이 같다.
 
 #### 인덱스의 자료구조인 이유
@@ -52,7 +98,7 @@ DB (Database)
 
 1. 데이터는 block 단위로 secondary storage에 저장된다. 
 	1. secondary storage에 접근하는 횟수가 많을수록 느리다.
-2. RDBMS의 row와 **index node** 역시 block 단위로 저장된다.
+2. RDBMS의 row와 **index node** 도 block과 비슷한 단위를(DB마다 다름) 사용한다.
 	1. 데이터가 너무 많아서 메모리에 전부 올릴 수 없음, 필요한거만 그때그때 읽어서 써야 한다.
 3. tree 형태의 자료구조는 메모리 상에서 연속적이지 않다. 따라서 random I/O가 발생한다.
 	1. random I/O는 sequential I/O보다 성능이 더 느리다.
@@ -73,14 +119,59 @@ DB (Database)
 - https://engineerinsight.tistory.com/336
 - https://www.youtube.com/watch?v=bqkcoSm_rCs&list=PLcXyemr8ZeoR82N8uZuG9xVrFIfdnLd72&index=25
 - https://en.wikipedia.org/wiki/B-tree
+- https://www.youtube.com/watch?v=yLe7_3cGSeU
 
 
 ## LSM Tree - B Tree vs LSM Tree
 
-- 실제로 트리 구조를 띄기 때문에 LSM(log-structured merge) Tree라고 부른다.
+- 트리 구조를 띄기 때문에 LSM(log-structured merge) Tree라고 부른다.
 
+- 여러 NoSQL에서 많이 사용된다.
+- 쓰기 작업에 최적화되어 있다.
+	- 모든 작업이 쓰기로 이루어진다.
+		- 삭제도 실제로 삭제하지 않고, "삭제된 상태"를 저장한다.
+		- 변경도 역시 쓰기를 수행한다.
+		- Memtable -> Level N(0에서 부터)의 최근 SSTable 순으로 읽는 식.
+			- 각 영역에서 가장 먼저 찾은 값이 최신 상태임.
+			- 각 SSTable는 정렬된 상태를 가지므로 빠르게 검색 가능.
+- 구조 설명
+	- Memtable: 메모리에서 관리되며, 쓰기 작업 시 데이터를 먼저 이곳에 저장
+		- Balanced Binary Tree 형태이며 정렬된 상태를 가진다.
+	- Level 0: Memtable이 가득 차면 디스크로 플러시되어 SSTable로 변환한다. 이 초기 SSTable은 Level 0에 저장된다. 
+		- SSTable는 로그 형태로 저장되어 있다.
+		- SSTable를 작성할 때는 순차 I/O가 발생하는데, 이는 Memtable가 정렬된 상태를 가지기 때문이다.
+	- Level 1, Level 2, ...: SSTable이 일정 기준을 초과하면 컴팩션(compaction) 과정을 통해 하위 레벨로 이동. 이 과정에서 중복된 데이터나 삭제된 데이터(tombstone)를 제거하여 더 큰 SSTable로 병합한다.
+		- SSTable은 합쳐지기 쉬움 (merge sort와 비슷한 방식)
+	- 경우에 따라 효율적인 처리를 위해 블룸 필터(무조건 없음 or 있을 수도 있음. 상태를 반환함)를 사용함.
+		- 특정 SSTable에 검색 조건(key)가 있는지 확인
+
+- B+Tree와 비교
+	- B+Tree
+		- 모든 I/O가 랜덤 I/O (디스크 접근 기준)
+		- 여러 Page 업데이트가 발생(level 변경이나 트리 구조를 유지하기 위한 변경) 가능
+		- 읽기 작업에 최적화 되어 있음.
+		- 그러나 위 특징으로 데이터 쓰기 속도에 제한됨.
+	- LSM Tree
+		- 디스크에 데이터 저장(삭제/수정도 저장으로 봐야 함) 시 순차 I/O가 발생한다. 즉, 모든 디스크 I/O가 순차 I/O이다.
+		- 트리 구조를 지키거나 할 필요 없기 때문에 쓰기 작업에 시간이 적게 걸림
+		- SSTable Compaction은 비동기적으로 수행 가능 (백그라운드에서 수행, B+Tree는 구조를 유지해야 하므로 이 과정에서 쓰기 작업 속도가 느려짐.)
+		- 정렬된 상태를 가지므로 Range 검색 가능
+		- 쓰기 작업에 최적화되어 있음.
+		- 그러나 위 특징으로 B Tree에 비해 읽기 속도가 상대적으로 느리고, 디스크를 더 많이 차지함.
+			- level을 순차적으로 내려가면서 읽어야 함.
+			- Memtable나 SSTable 정렬 된 상태를 가지므로 엄청 느린건 아님.
 
 - https://www.youtube.com/watch?v=I6jB0nM9SKU
 - https://www.youtube.com/watch?v=i_vmkaR1x-I
 - https://en.wikipedia.org/wiki/Log-structured_merge-tree
 
+### WAL (Write-Ahead Logging)
+
+(본격적인 작성은 나중에)
+
+대충 설명: 트랜잭션마다 DB(디스크)에 매번 쓰고, 트랜잭션이 끝날 때까지 완료를 기다리면 오버헤드가 심함. (예: 테이블에 데이터 추가 + 여러 인덱스에 추가 -> 특히 랜덤 I/O가 많음)
+
+그래도 트랜잭션이 끝나면 ACID(특히 Durability)를 보장하기 위해 디스크에 데이터를 써야 하므로, 로그 형식으로 트랜잭션 수행 결과를 저장(영속성 보장)해놓고 나중에 비동기적으로 반영함.
+
+- (근데 이러면 궁금한게, WAL에만 저장되고 DB에 반영되기 전이면 반영된 결과를 못 읽는거 아니야?)
+	- Dirty Page를 가져오기 전에 WAL을 Disk에 반영한다거나, Disk 읽고 WAL을 읽어서 최신 데이터를 가져온다거나... 방법은 많을거 같음. 뇌피셜이니까 나중에 찾아보기
