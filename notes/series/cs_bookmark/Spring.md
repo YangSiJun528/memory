@@ -43,8 +43,29 @@
 - https://www.youtube.com/watch?v=_nkJkWVH-mo
 	- 우아한 테크 세미나 - 이동욱 - 스프링 배치 소개부터 사용법까지 - 좀 예전 내용일 수도 있는데, 사용법에 대한 인사이트 얻을 수 있음
 
+## Spring
+
+
+
+## Spring Boot
+
+
+
 ## Spring Security
+
+	- Servelt 기준으로 프록시 필터 + 인증 필터
+	- 비번 암호화 변경 가능한 거
+	- 인증/인가 객체 생성/관리 방식
 
 ## Spring + DB
 
+- 다음의 역할이 각자 다르다는 걸 알고, 설명할 수 있으면 됨
+	- Spring TX
+	- JPA/Hibernate
+	- Spring Data JDBC/ Data JPA
+	- QueryDSL / JOOQ
+
+- 자료 추천
+	- 김영한님 Spring DB + JPA 강의
+		- 내 github private repository에 정리해둔 거 있음.
 
