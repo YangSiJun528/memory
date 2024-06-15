@@ -107,6 +107,7 @@
 - [(작성 중) - 객체지향이란?](notes/etc/(작성%20중)%20-%20객체지향이란?.md)
 - [OWASP, CORS, XSS, CSRF, SQL Injection](notes/etc/OWASP,%20CORS,%20XSS,%20CSRF,%20SQL%20Injection.md)
 - [디버깅은 어떻게 동작하는가?](notes/etc/디버깅은%20어떻게%20동작하는가?.md)
+- [디버깅(Debugging)과 사용법](notes/etc/디버깅(Debugging)과%20사용법.md)
 
 ## 시리즈 글
 특정 주제가 아니라 목적을 가지고 진행한 작업들에 대한 기록
