@@ -116,7 +116,7 @@
 - [스터디 진행 Github Repository](https://github.com/chijoon-study/cs-study) - Wiki에 정리되어 있음
 - [실제 어셈블리어 흝어보기](notes/series/nand2tetris/실제%20어셈블리어%20흝어보기.md)
 
-### C 언어로 자료구조 구현하기
+### [중단됨] C 언어로 자료구조 구현하기
 - [Project Repository](https://github.com/YangSiJun528/data_structure_with_c)
 - [README](notes/series/c_with_%20data_structure/README.md)
 - [0. Mac에서 CLion을 사용한 개발환경 구축하기 + CMake 알아보기](notes/series/c_with_%20data_structure/0.%20Mac에서%20CLion을%20사용한%20개발환경%20구축하기%20+%20CMake%20알아보기.md)
@@ -124,6 +124,7 @@
 - [1. C 기초 정리](notes/series/c_with_%20data_structure/1.%20C%20기초%20정리.md)
 - [2. C로 자료구조 구현하기](notes/series/c_with_%20data_structure/2.%20C로%20자료구조%20구현하기.md)
 - [3. 프로젝트를 진행하면서 얻은 인사이트 정리](notes/series/c_with_%20data_structure/3.%20프로젝트를%20진행하면서%20얻은%20인사이트%20정리.md)
+- [4. 중단 이유 및 후기](notes/series/c_with_%20data_structure/4.%20중단%20이유%20및%20후기.md)
 
 ### 여러 자료 북마크
 - [Readme](notes/series/cs_bookmark/Readme.md)
