@@ -175,3 +175,50 @@ DB (Database)
 
 - (근데 이러면 궁금한게, WAL에만 저장되고 DB에 반영되기 전이면 반영된 결과를 못 읽는거 아니야?)
 	- Dirty Page를 가져오기 전에 WAL을 Disk에 반영한다거나, Disk 읽고 WAL을 읽어서 최신 데이터를 가져온다거나... 방법은 많을거 같음. 뇌피셜이니까 나중에 찾아보기
+	
+
+## Redis
+
+> 레디스(Redis)는 Remote Dictionary Server의 약자로서, "키-값" 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈 소스 기반의 비관계형 데이터베이스 관리 시스템(DBMS)이다. 2009년 살바토르 산필리포(Salvatore Sanfilippo)가 처음 개발했다. 2015년부터 Redis Labs가 지원하고 있다. 모든 데이터를 메모리로 불러와서 처리하는 메모리 기반 DBMS이다. BSD 라이선스를 따른다. DB-Engines.com의 월간 랭킹에 따르면, 레디스는 가장 인기 있는 키-값 저장소이다.
+>
+> -위키피디아-
+
+(상장하고, 자유오픈소스가 아니라 다른 기술로 뺏길 수도 있지만, 역할에 대한 이해는 필요함. 역할은 잘 대체되지 않기 때문에.)
+
+- Redis의 초기 목적: 빠른 속도의 Key-Value DB
+- Redis가 빠른 이유 (초당 수백만 건 처리 가능, 평균 작업 속도 < 1ms)
+	- InMemory DB
+		- 자연스럽게 지연시간이 짦고, 구현 난이도도 낮음
+	- 싱글 스레드로, lock 알고리즘이 필요 없음. (이벤트 루프)
+		- epoll과 같은 I/O 멀티플렉싱 기능을 사용.
+		- 단, 여러 코어를 사용하지 못한다는 단점
+			- (해결하기 위해서 코어에 여러 redis 인스턴스를 실행시키고, Redis Cluster를 사용하기도 하는듯?)
+		- 정확히는 처리를 수행하는 스레드가 하나.
+			- OS/네트워크 I/O를 처리하는 스레드 풀이 필요함.
+			- 설정하면 처리도 여러 스레드에서 할 수 있다고는 함.
+	- 다양한 데이터 타입 효율적인 지원
+- Redis가 뜬 이유
+	- Replication(복제, Master-Slave 관계, 읽기 속도 향상), Cluster(수평확장(샤딩), 안전성?)을 적용하기 쉽고 안전하기 때문에.
+		- (이 부분 잘 이해 안감)
+	- 다양한 Data Type 지원
+	- 기업 친화적인 기능 확장
+		- 지속성 옵션, Pub/Sub, 여러 데이터 지원 등 
+		- 단순 캐시 DB 뿐만 아니라 다양한 기능 제공
+			- 반면에, memcached는 단순하게 캐싱 기능에 특화됨
+- Redis 사용 용도
+	- 캐싱
+	- [RAG](https://aws.amazon.com/ko/what-is/retrieval-augmented-generation/)를 사용해서 Gen AI 개발? 튜닝?
+		- 거의 동일한 질문 저장 / 프롬프트 저장 등
+	- 개인 맞춤형 서비스
+		- 사용자의 프로파일 정보 관련 서비스를 Redis에 캐싱
+	- 실시간 데이터 스트리밍
+		- (근데 영속성 보장 안되는 특징을 가지지 않나?, 뭐 사용 예시 정리하는거니까)
+
+
+- 북마크 겸 참고
+	- [위키피디아 - 레디스](https://ko.wikipedia.org/wiki/%EB%A0%88%EB%94%94%EC%8A%A4)
+	- [일반 NoSQL DB와 Redis가 다른 점은? [세미남417@토크아이티, 김봉환 Solution Architect]](https://youtu.be/PR2avqOerWw?si=zcSeeV01-1Rz4rJ8)
+	- [System Design: Why is single-threaded Redis so fast?](https://www.youtube.com/watch?v=5TRFpFBccQM)
+	- [AI시대, 인메모리 NoSQL DB Redis가 주목받는 이유: RAG, 개인화, 자율운영](https://www.youtube.com/watch?v=VtWa9t_9CKA&t=66s)
+	- [[미니컨] 대용량 서비스에 자주 쓰이는 레디스에 대해 알아보자](https://www.youtube.com/watch?v=M2u3pOT7I8E) << 추천
+	- [[NHN FORWARD 2021] Redis 야무지게 사용하기](https://youtu.be/92NizoBL4uA?si=jKM9JmXXCTvk8p18) << 추천
