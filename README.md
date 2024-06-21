@@ -129,7 +129,7 @@
 ### C++ 공부하기
 - [README](notes/series/cpp/README.md)
 #### 문법 & 기능
-- 
+- [C++ 기초](notes/series/cpp/grammar/C++%20기초.md)
 
 ### 여러 자료 북마크
 - [Readme](notes/series/cs_bookmark/Readme.md)
