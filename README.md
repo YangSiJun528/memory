@@ -126,6 +126,11 @@
 - [3. 프로젝트를 진행하면서 얻은 인사이트 정리](notes/series/c_with_%20data_structure/3.%20프로젝트를%20진행하면서%20얻은%20인사이트%20정리.md)
 - [4. 중단 이유 및 후기](notes/series/c_with_%20data_structure/4.%20중단%20이유%20및%20후기.md)
 
+### C++ 공부하기
+- [README](notes/series/cpp/README.md)
+#### 문법 & 기능
+- 
+
 ### 여러 자료 북마크
 - [Readme](notes/series/cs_bookmark/Readme.md)
 - [Network - HTTP, Web 위주](notes/series/cs_bookmark/Network%20-%20HTTP,%20Web%20위주.md)
