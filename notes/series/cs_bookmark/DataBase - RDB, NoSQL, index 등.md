@@ -96,18 +96,20 @@ DB (Database)
 
 (DB,OS의 파일 시스템에 개념에 대한 이해가 필요함)
 
-1. 데이터는 block 단위로 secondary storage에 저장된다. 
-	1. secondary storage에 접근하는 횟수가 많을수록 느리다.
-2. RDBMS의 row와 **index node** 도 block과 비슷한 단위를(DB마다 다름) 사용한다.
+1. 데이터는 block 단위로 secondary storage에 저장된다.
+	1. block/page라고 부르며, RDBMS의 I/O의 최소 단위이다. 일반적으로 4kb임.
+	2. (이게 RDB가 block/page 방식이라 RDB의 B Tree가 page를 사용하는지, 아니면 B Tree가 원래 page를 사용하는건지 모르겠음. )	
+	3. secondary storage에 접근하는 횟수가 많을수록 느리다.
+3. RDBMS의 row와 **index node** 도 block과 비슷한 단위를(DB마다 다름) 사용한다.
 	1. 데이터가 너무 많아서 메모리에 전부 올릴 수 없음, 필요한거만 그때그때 읽어서 써야 한다.
-3. tree 형태의 자료구조는 메모리 상에서 연속적이지 않다. 따라서 random I/O가 발생한다.
+4. tree 형태의 자료구조는 메모리 상에서 연속적이지 않다. 따라서 random I/O가 발생한다.
 	1. random I/O는 sequential I/O보다 성능이 더 느리다.
-4. 따라서 I/O가 적게 발생하는 자료구조가 좋다.
-5. B-Tree의 경우 N차 B-Tree를 통해 한번에 넒은 범위의 데이터를 검사할 수 있다.
+5. 따라서 I/O가 적게 발생하는 자료구조가 좋다.
+6. B-Tree의 경우 N차 B-Tree를 통해 한번에 넒은 범위의 데이터를 검사할 수 있다.
 	1. 쉬운코딩 예시로 101차에 level이 3인 경우 경우 최선의 경우 약 1억의 데이터를 읽을 수 있다.
 	2. n차일 때, 최선의 경우 m = n, 최악의 경우는 m = (n/2)+1고, 다음 식을 통해 구하기 가능
 		1. `(m^level + m^level-1 ... m^1)`
-6. 이는 B-Tree가 다른 방식보다 낮은 level을 가진다는 의미고, 그만큼 I/O 횟수도 줄어든다.
+7. 이는 B-Tree가 다른 방식보다 낮은 level을 가진다는 의미고, 그만큼 I/O 횟수도 줄어든다.
 
 - 추가 - (약간 내 뇌피셜도 있음)
 	- B-Tree(밒 B+Tree)는 읽기에 최적화되어 있다. 쓰기 작업이 느리다. (특히 level이 변해서 재구성 하는 경우 더 느려진다.)
