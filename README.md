@@ -126,6 +126,10 @@
 - [3. 프로젝트를 진행하면서 얻은 인사이트 정리](notes/series/c_with_%20data_structure/3.%20프로젝트를%20진행하면서%20얻은%20인사이트%20정리.md)
 - [4. 중단 이유 및 후기](notes/series/c_with_%20data_structure/4.%20중단%20이유%20및%20후기.md)
 
+### 0부터 시작하는 OS 자작 입문
+- [Readme](notes/series/zero_os/Readme.md)
+- 
+
 ### C++ 공부하기
 - [README](notes/series/cpp/README.md)
 #### 문법 & 기능
