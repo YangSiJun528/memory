@@ -103,3 +103,27 @@
 		- `dmesg` 명령어를 사용해서 USB를 꽂을 때 나오는 커널 로그?를 읽어서 USB의 이름을 찾는다거나.
 		- 바이너리 파일을 책 내용과 맞게 잘 작성했는지 확인하기 위해  CheckSum을 수행한다거나.
 		- QEMU라거나..
+
+- 개발환경 설정하기
+	- https://github.com/sarisia/mikanos-docker 를 참고해서 arm64 용으로 빌드된 도커 이미지 다운
+	- 편리한 사용을 위해서 devcontainer를 사용해야 하는데, https://github.com/sarisia/mikanos-devcontainer 를 참고
+		- 해당 템플릿을 복사
+		- vscode에서 열기 + devcontainer 띄우는 커멘트 실행해서 적용
+			- f1 누르고 `Dev Containers: Open Folder in Container` 선택
+	- 추가로 호스트 환경에서 X11 Server(Mac에서는 XQuartz) 없이 MikanOS의 동작을 확인하기 위해서 VNC 설정을 추가함.
+		- (위 내용을 전허 이해하지 못했지만 일단... 따라함)
+		- 작업한 commit: https://github.com/YangSiJun528/mikanos-devcontainer/commit/a74d934b6cb8536527265c45af00798814e373e2 
+	- 다시 빌드
+	- 개발환경 설정
+		- https://zenn.dev/karaage0703/articles/1bdb8930182c6c#vs-code-devcontainer%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97
+		- 위 링크는 책 저자가 추가로 작성한 docker + devcontainer용 개발환경 설정 방법 (약간 잘 안되면 댓글 보기)
+		- 추가로 git repo안에 git repo(`.git`)이 있어서, clone한 개발환경의 `.git`을 제거하였다.
+			- 근데 책에서 checkout으로 진행상황을 자주 바꾸는 것 같아서 복구함.
+		- **터미널을 다시 열면 다음 명령 실행해야 한다고 함**: `OS_DIR=/workspaces/mikanos-devcontainer/mikanos`
+		- 마지막으로 https://github.com/sarisia/mikanos-docker?tab=readme-ov-file#m1-mac-%E3%81%A7%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AF 에서 `tools_def.txt`를 알맞게 수정해야한다.
+		- 작업한 commit: https://github.com/YangSiJun528/mikanos-devcontainer/commit/2cfeb907ef41d6bd70cd5c86bd22f7c439bb2b0b
+			- 이후에 mikanos git 설정 복구: https://github.com/YangSiJun528/mikanos-devcontainer/commit/72b594fd646106e12fcbb54b9513910dfaa32906
+- VSC에서 Dev Container 관련 사용 메모
+	- 시작: 호스트 환경의 프로젝트를 VSC로 열기
+		- f1 누르고 `Dev Containers: Open Folder in Container` 선택
+	- 종료: 왼쪽 하단의 프로젝트 이름을 눌러서 Remote Connection Close 가능
