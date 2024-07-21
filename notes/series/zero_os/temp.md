@@ -121,6 +121,7 @@
 			- 근데 책에서 checkout으로 진행상황을 자주 바꾸는 것 같아서 복구함.
 		- **터미널을 다시 열면 다음 명령 실행해야 한다고 함**: `OS_DIR=/workspaces/mikanos-devcontainer/mikanos`
 		- 마지막으로 https://github.com/sarisia/mikanos-docker?tab=readme-ov-file#m1-mac-%E3%81%A7%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AF 에서 `tools_def.txt`를 알맞게 수정해야한다.
+			- 나는 nano 사용해서 수정함. vi는 vsc에서 일부 단축키다 vsc 단축키와 동일해서 안먹히는 문제가 있었음.
 		- 작업한 commit: https://github.com/YangSiJun528/mikanos-devcontainer/commit/2cfeb907ef41d6bd70cd5c86bd22f7c439bb2b0b
 			- 이후에 mikanos git 설정 복구: https://github.com/YangSiJun528/mikanos-devcontainer/commit/72b594fd646106e12fcbb54b9513910dfaa32906
 - VSC에서 Dev Container 관련 사용 메모
